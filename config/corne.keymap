@@ -330,6 +330,11 @@ ZMK_MACRO(
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <40 21>;
         };
+
+        tc {
+            bindings = <&kp TAB>;
+            key-positions = <40 20>;
+        };
     };
 
     keymap {
