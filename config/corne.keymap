@@ -202,6 +202,7 @@ behaviors {
                 COMBO( editor, 70, &kp LA(N1), 13 34)
                 COMBO( shift, 70, &sk LSHIFT, 14 34)
                 COMBO( escape, 70, &kp ESC, 11 34)
+                COMBO( butl, 50, &bootloader , 11 12 13 14 34 )
 
                 COMBO(seruan, 50, &mt LS(N7)  LS(N1), 6 16)
                 COMBO(underscore, 50, &kp LS(MINUS), 27 29)
@@ -220,6 +221,7 @@ behaviors {
                 COMBO( mouseclick, 100, &mkp LCLK, 36 37)
                 COMBO( dele, 100, &kp DELETE, 17 36 )
                 COMBO( plus, 100, &kp LS(EQUAL), 7 17 )
+               COMBO( butr, 50, &bootloader , 17 18 19 37 )
         };
 
 
