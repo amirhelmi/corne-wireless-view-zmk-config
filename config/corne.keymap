@@ -338,10 +338,10 @@ ZMK_MACRO(
         default_layer {
             display-name = "Base";
             bindings = <
-&none &mt LG(LS(S)) W  &kp L      &kp Y  &kp P          &mt LA(HOME) B              &kp Z      &mt INSERT F   &kp O          &kp U         &mt GRAVE SQT   &none
-&none &kp C     &phl LCTRL R  &lt NAV S        &lt NUM T  &kp G                     &kp M          &kp N           &kp E      &phr LCTRL I   &kp A       &none
-&none   &mt LSHIFT Q  &mt LC(FSLH) J   &mt LGUI V       &kp D      &kp K            &kp X      &kp H  &mt BSLH FSLH  &kp COMMA       &kp DOT   &none
-                    &lt MOUSE RET  &gui_tap 0 SPACE  &lt FUN TAB   &repeat_fun 0 0  &noidlethumb LSHIFT BACKSPACE  &mt LALT RET
+&none  &mt LG(LS(S)) W  &kp L           &kp Y          &kp P             &mt LA(HOME) B    &kp Z            &mt INSERT F                   &kp O          &kp U         &mt GRAVE SQT  &none
+&none  &kp C            &phl LCTRL R    &lt NAV S      &lt NUM T         &kp G             &kp M            &kp N                          &kp E          &phr LCTRL I  &kp A          &none
+&none  &mt LSHIFT Q     &mt LC(FSLH) J  &mt LGUI V     &kp D             &kp K             &kp X            &kp H                          &mt BSLH FSLH  &kp COMMA     &kp DOT        &none
+                                        &lt MOUSE RET  &gui_tap 0 SPACE  &lt FUN TAB       &repeat_fun 0 0  &noidlethumb LSHIFT BACKSPACE  &mt LALT RET
             >;
         };
 
