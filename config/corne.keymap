@@ -18,7 +18,7 @@
 #define NUM 2
 #define NUMGUI 3
 #define FUN 4 
-#define BLU 5
+#define MOUSE 5
 
 #define COMBO(NAME,TIMEOUT, BINDINGS, KEYPOS) \
   combo_##NAME { \
@@ -235,9 +235,9 @@ behaviors {
             display-name = "Base";
             bindings = <
 &mt LG(LS(S)) W    &kp L             &kp Y             &kp P          &mt LA(HOME) B         &kp  Z    &mt INSERT F    &kp O         &kp U           &mt GRAVE SQT    
-  &kp C              &mt LCTRL  R     &kp S        &kp T       &kp G                  &kp M     &kp N           &kp  E               &mt LCTRL I    &kp A  
+  &kp C              &phl LCTRL  R     &lt NAV S        &lt NUM T       &kp G                  &kp M     &kp N           &kp  E                &phr LCTRL I    &kp A  
  &mt LSHIFT Q        &mt LC(FSLH) J    &mt LGUI V       &kp D           &kp K                 &kp X     &kp H           &mt BSLH FSLH        &kp COMMA       &kp DOT 
-                         &mt LALT RET    &gui_tap 0 SPACE     &lt FUN TAB    &repeat_fun 0 0    &noidlethumb LSHIFT BACKSPACE      &mt LALT RET
+                         &lt MOUSE RET    &gui_tap 0 SPACE     &lt FUN TAB    &repeat_fun 0 0    &noidlethumb LSHIFT BACKSPACE      &mt LALT RET
             >;
         };
 
@@ -288,7 +288,7 @@ behaviors {
 
 
 
-        blu_layer  {
+        mouse_layer  {
             bindings = <
 &trans  &trans  &trans  &trans  &trans    &msc SCROLL_UP    &trans          &mmv MOVE_UP    &trans           &trans  
 &trans  &trans  &trans  &trans  &trans    &msc SCROLL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  
