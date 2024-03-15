@@ -309,6 +309,16 @@ ZMK_MACRO(
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <40 22>;
         };
+
+        lboot {
+            bindings = <&bootloader>;
+            key-positions = <13 14 15 16 37>;
+        };
+
+        rboot {
+            bindings = <&bootloader>;
+            key-positions = <40 19 20 21 22>;
+        };
     };
 
     keymap {
