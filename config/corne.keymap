@@ -319,12 +319,12 @@ ZMK_MACRO(
         };
 
         ctrlcopy {
-            bindings = <&ctrl_nav>;
+            bindings = <&hold_ctrl 0  LC(C)>;
             key-positions = <14 15>;
         };
 
         shiftpaste {
-            bindings = <&mt A B>;
+            bindings = <&hold_shift 0  LC(V)>;
             key-positions = <15 16>;
         };
     };
