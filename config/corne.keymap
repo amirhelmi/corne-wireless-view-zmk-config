@@ -337,6 +337,11 @@ ZMK_MACRO(
             bindings = <&kp COLON>;
             key-positions = <19 40>;
         };
+
+        stickshift {
+            bindings = <&sk LEFT_SHIFT>;
+            key-positions = <37 16>;
+        };
     };
 
     keymap {
