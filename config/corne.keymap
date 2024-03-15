@@ -325,7 +325,7 @@ ZMK_MACRO(
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "Base";
+            display-name = "alphabase";
             bindings = <
 &none  &mt LG(LS(S)) W  &kp L           &kp Y          &kp P             &mt LA(HOME) B    &kp Z            &mt INSERT F                   &kp O          &kp U         &mt GRAVE SQT  &none
 &none  &kp C            &phl LCTRL R    &lt NAV S      &lt NUM T         &kp G             &kp M            &kp N                          &kp E          &phr LCTRL I  &kp A          &none
@@ -335,6 +335,7 @@ ZMK_MACRO(
         };
 
         nav_layer {
+display-name = "navigation";
             bindings = <
 &trans  &trans            &trans     &kp LC(Z)  &kp LC(Y)  &trans      &trans     &kp UP       &trans  &trans  &trans  &kp LCTRL
 &trans  &mt LSHIFT LC(S)  &kp LC(R)  &kp HOME   &kp LEFT   &kp DOWN    &kp RIGHT  &kp END      &trans  &trans  &trans  &kp LC(A)
