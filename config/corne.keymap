@@ -327,6 +327,16 @@ ZMK_MACRO(
             bindings = <&hold_shift 0  LC(V)>;
             key-positions = <15 16>;
         };
+
+        dele {
+            bindings = <&kp DEL>;
+            key-positions = <28 26>;
+        };
+
+        colon {
+            bindings = <&kp COLON>;
+            key-positions = <19 40>;
+        };
     };
 
     keymap {
@@ -345,10 +355,10 @@ ZMK_MACRO(
         nav_layer {
             display-name = "navigation";
             bindings = <
-&none  &trans  &trans     &trans  &kp LC(Z)         &kp LC(Y)    &trans    &trans     &kp UP    &trans     &trans   &none
-&none  &trans  &kp LCTRL  &trans  &mt LSHIFT LC(S)  &kp LC(R)    &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &none
-&none  &trans  &trans     &trans  &kp LC(A)         &trans       &trans    &kp PG_UP  &none     &kp PG_DN  &trans   &none
-                          &trans  &kp LA(TAB)       &trans       &trans    &trans     &trans
+&none  &kp CAPSLOCK  &trans     &trans  &kp LC(Z)         &kp LC(Y)    &trans    &trans     &kp UP    &trans     &trans   &none
+&none  &trans        &kp LCTRL  &trans  &mt LSHIFT LC(S)  &kp LC(R)    &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &none
+&none  &trans        &trans     &trans  &kp LC(A)         &trans       &trans    &kp PG_UP  &none     &kp PG_DN  &trans   &none
+                                &trans  &kp LA(TAB)       &trans       &trans    &trans     &trans
             >;
         };
 
