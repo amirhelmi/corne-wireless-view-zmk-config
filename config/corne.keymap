@@ -342,6 +342,21 @@ ZMK_MACRO(
             bindings = <&sk LEFT_SHIFT>;
             key-positions = <37 16>;
         };
+
+        click {
+            bindings = <&mkp LCLK>;
+            key-positions = <39 40>;
+        };
+
+        semicolon {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <40 20 21>;
+        };
+
+        rightclick {
+            bindings = <&mkp RCLK>;
+            key-positions = <40 41>;
+        };
     };
 
     keymap {
@@ -350,10 +365,10 @@ ZMK_MACRO(
         default_layer {
             display-name = "alphabet";
             bindings = <
-&none  &mt LG(LS(S)) W  &kp L           &kp Y         &kp P             &mt LA(HOME) B    &kp Z            &mt INSERT F                   &kp O          &kp U         &mt GRAVE SQT  &none
-&none  &kp C            &phl LCTRL R    &lt NAV S     &lt NUM T         &kp G             &kp M            &kp N                          &kp E          &phr LCTRL I  &kp A          &none
-&none  &mt LSHIFT Q     &mt LC(FSLH) J  &mt LGUI V    &kp D             &kp K             &kp X            &kp H                          &mt BSLH FSLH  &kp COMMA     &kp DOT        &none
-                                        &mt LALT RET  &gui_tap 0 SPACE  &lt FUN TAB       &repeat_fun 0 0  &noidlethumb LSHIFT BACKSPACE  &mt LALT RET
+&none  &mt LG(LS(S)) W  &kp L           &kp Y             &kp P             &mt LA(HOME) B    &kp Z            &mt INSERT F                   &kp O          &kp U      &mt GRAVE SQT  &none
+&none  &kp C            &kp R           &lt NAV S         &lt NUM T         &kp G             &kp M            &kp N                          &kp E          &kp I      &kp A          &none
+&none  &mt LSHIFT Q     &mt LC(FSLH) J  &mt LGUI V        &kp D             &kp K             &kp X            &kp H                          &mt BSLH FSLH  &kp COMMA  &kp DOT        &none
+                                        &sk LEFT_CONTROL  &gui_tap 0 SPACE  &lt FUN TAB       &repeat_fun 0 0  &noidlethumb LSHIFT BACKSPACE  &mt LALT RET
             >;
         };
 
