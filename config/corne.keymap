@@ -423,7 +423,7 @@ ZMK_MACRO(
         value: value {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(V) &kp LS(A) &kp LS(L) &kp LS(U) &kp LS(E) &kp LPAR &kp O &kp B &kp J &kp E &kp C &kp T>;
+            bindings = <&kp LS(V) &kp LS(A) &kp LS(L) &kp LS(U) &kp LS(E) &kp LPAR &kp O &kp B &kp J &kp E &kp C &kp T>;
             label = "VALUE";
         };
     };
