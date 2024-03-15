@@ -95,7 +95,7 @@ ZMK_MACRO(
     sup,
     bindings = <
 &kp LS(S) &kp Y &kp N &kp C &kp H &kp R &kp O &kp N &kp I &kp Z &kp E 
-&kp U &kp P &kp G &kp R &kp A &kp D &kp E &kp A &kp B &kp I &kp L &kp I &kp T &kp Y &kp LS(N4) &kp LS(N5) &kp LS(N6) &kp LS(EQUAL) &kp RE
+&kp U &kp P &kp G &kp R &kp A &kp D &kp E &kp A &kp B &kp I &kp L &kp I &kp T &kp Y &kp LS(N4) &kp LS(N5) &kp LS(N6) &kp LS(EQUAL)
     >;
 
     )
