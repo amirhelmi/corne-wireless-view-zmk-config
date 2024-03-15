@@ -348,7 +348,7 @@ ZMK_MACRO(
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "alphabase";
+            display-name = "alphabet";
             bindings = <
 &none  &mt LG(LS(S)) W  &kp L           &kp Y         &kp P             &mt LA(HOME) B    &kp Z            &mt INSERT F                   &kp O          &kp U         &mt GRAVE SQT  &none
 &none  &kp C            &phl LCTRL R    &lt NAV S     &lt NUM T         &kp G             &kp M            &kp N                          &kp E          &phr LCTRL I  &kp A          &none
@@ -368,6 +368,7 @@ ZMK_MACRO(
         };
 
         num_layer {
+            display-name = "number";
             bindings = <
 &none  &none  &none  &none   &none   &none     &kp GRAVE   &kp N7  &kp N8  &kp N9  &mt FSLH MINUS        &none
 &none  &none  &none  &none   &none   &none     &kp PERIOD  &kp N4  &kp N5  &kp N6  &kp N0                &none
@@ -377,6 +378,7 @@ ZMK_MACRO(
         };
 
         numgui_layer {
+display-name = "appswitcher";
             bindings = <
 &none  &trans         &kp N7  &kp N8  &kp N9         &kp N0    &none  &none  &none  &none  &none  &none
 &none  &mt LSHIFT N0  &kp N4  &kp N5  &mt LSHIFT N6  &trans    &none  &none  &none  &none  &none  &none
@@ -386,6 +388,7 @@ ZMK_MACRO(
         };
 
         fun_layer {
+display-name = "function";
             bindings = <
 &none  &none            &none      &kp LA(UP)    &none      &none         &kp F12  &kp F7  &kp F8  &kp F9  &none  &none
 &none  &kp LC(LA(TAB))  &kp LC(R)  &kp LA(DOWN)  &kp LC(E)  &kp LC(T)     &kp F11  &kp F4  &kp F5  &kp F6  &none  &none
