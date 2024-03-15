@@ -286,45 +286,7 @@ ZMK_MACRO(
     combos {
         compatible = "zmk,combos";
 
-        COMBO(assign, 50, &semiequal, 13 14 17 18)
-               
-
-                COMBO(equal, 50, &kp EQUAL, 4 14)
-                COMBO(del, 50, &kp DEL, 22 24)   
-                COMBO(hold_ctrl_copy, 50, &hold_ctrl 0  LC(C), 12 13 )
-                COMBO(hold_shift_paste, 50,&hold_shift 0  LC(V), 13 14 )
-                COMBO(winclose, 50,&kp LA(SPACE), 22 23 )
-                COMBO(versionctrl, 50, &versioncontrol, 2 3 )
-                COMBO(parenthesisL, 50, &mt LBKT LS(N9),  12 34 )
-                COMBO(excelright, 50, &kp LC(PG_DN), 13 24)
-                COMBO(excelleft, 50, &kp  LC(PG_UP), 22 13)
-                COMBO(value, 50, &value, 2 12)
-                COMBO( shiftnum, 100, &shift_num, 14 34 )
-                COMBO( shifttab, 50, &kp LS(TAB), 34 35)
-                COMBO( hold_ctrl_selectall, 50, &hold_ctrl_shift 0 LC(A), 12 13 14 )
-                COMBO( editor, 70, &kp LA(N1), 13 34)
-                COMBO( shift, 70, &sk LSHIFT, 14 34)
-                COMBO( escape, 70, &kp ESC, 11 34)
-                COMBO( butl, 50, &bootloader , 11 12 13 14 34 )
-
-                COMBO(seruan, 50, &mt LS(N7)  LS(N1), 6 16)
-                COMBO(underscore, 50, &kp LS(MINUS), 27 29)
-                COMBO(semi, 50, &kp  SEMI, 18 19 37)
-                COMBO(colon, 50, &kp LS(SEMI), 17 37)
-                COMBO(dot, 50, &kp DOT, 27 28)
-                COMBO(minus, 50, &kp MINUS, 28 29)
-                COMBO(parenthesisR, 80, &mt RBKT LS(N0), 19 37 )
-                COMBO(statement, 50, &statement, 37 9)
-                COMBO(comment, 50, &comment, 27 210)
-                COMBO( sup, 50, &sup, 27 28 29)
-                COMBO( info, 50, &info, 9 19 )
-                COMBO( ctrlback, 50, &kp LC(BACKSPACE), 110 37)
-                COMBO( tabanother, 50, &kp TAB, 18 37)
-                COMBO( menu, 50, &kp K_CONTEXT_MENU, 17 18 37 )
-                COMBO( mouseclick, 100, &mkp LCLK, 36 37)
-                COMBO( dele, 100, &kp DELETE, 17 36 )
-                COMBO( plus, 100, &kp LS(EQUAL), 7 17 )
-               COMBO( butr, 50, &bootloader , 17 18 19 37 )
+        
 
         rparten {
             bindings = <&kp RIGHT_BRACE>;
