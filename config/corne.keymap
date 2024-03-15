@@ -363,6 +363,21 @@ ZMK_MACRO(
             bindings = <&bt BT_CLR>;
             key-positions = <40 18 19>;
         };
+
+        underscore {
+            bindings = <&kp UNDER>;
+            key-positions = <31 33>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <31 32>;
+        };
+
+        stickyctrl {
+            bindings = <&sk LEFT_CONTROL>;
+            key-positions = <37 15>;
+        };
     };
 
     keymap {
@@ -374,7 +389,7 @@ ZMK_MACRO(
 &none  &mt LG(LS(S)) W  &kp L           &kp Y             &kp P             &mt LA(HOME) B    &kp Z            &mt INSERT F                   &kp O          &kp U      &mt GRAVE SQT  &none
 &none  &kp C            &kp R           &lt NAV S         &lt NUM T         &kp G             &kp M            &kp N                          &kp E          &kp I      &kp A          &none
 &none  &mt LSHIFT Q     &mt LC(FSLH) J  &mt LGUI V        &kp D             &kp K             &kp X            &kp H                          &mt BSLH FSLH  &kp COMMA  &kp DOT        &none
-                                        &sk LEFT_CONTROL  &gui_tap 0 SPACE  &lt FUN TAB       &repeat_fun 0 0  &noidlethumb LSHIFT BACKSPACE  &mt LALT RET
+                                        &mt ENTER K_MENU  &gui_tap 0 SPACE  &lt FUN TAB       &repeat_fun 0 0  &noidlethumb LSHIFT BACKSPACE  &mt LALT RET
             >;
         };
 
