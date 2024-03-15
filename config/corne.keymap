@@ -39,7 +39,7 @@
 
 &caps_word { continue-list = <UNDERSCORE MINUS BACKSPACE>; };
 
-/ 
+/ {
 ZMK_MACRO(
 
     num_gui,
