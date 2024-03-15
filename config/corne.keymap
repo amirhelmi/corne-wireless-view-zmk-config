@@ -285,7 +285,7 @@ ZMK_MACRO(
         compatible = "zmk,combos";
 
         rparenth {
-            bindings = <&kp RIGHT_PARENTHESIS>;
+            bindings = <&mt RIGHT_BRACKET RIGHT_PARENTHESIS>;
             key-positions = <40 21>;
         };
 
@@ -300,7 +300,7 @@ ZMK_MACRO(
         };
 
         lparenth {
-            bindings = <&kp LEFT_PARENTHESIS>;
+            bindings = <&mt LEFT_BRACKET LEFT_PARENTHESIS>;
             key-positions = <37 14>;
         };
 
@@ -378,6 +378,54 @@ ZMK_MACRO(
             bindings = <&sk LEFT_CONTROL>;
             key-positions = <37 15>;
         };
+
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <4 16>;
+        };
+
+        plus {
+            bindings = <&kp PLUS>;
+            key-positions = <7 19>;
+        };
+
+        infocombo {
+            bindings = <&info>;
+            key-positions = <9 21>;
+        };
+
+        valuecombo {
+            bindings = <&value>;
+            key-positions = <2 14>;
+        };
+
+        statementcombo {
+            bindings = <&statement>;
+            key-positions = <40 9>;
+        };
+    };
+
+    macros {
+        info: info {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp I &kp N &kp F &kp O &kp LPAR &kp SQT &kp FSLH &kp FSLH &kp SQT &kp RPAR &kp LEFT>;
+            label = "INFO";
+        };
+
+        statement: statement {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RET &kp LEFT_BRACE &kp RET &kp RBRC &kp UP_ARROW &kp ENTER>;
+            label = "STATEMENT";
+        };
+
+        value: value {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(V) &kp LS(A) &kp LS(L) &kp LS(U) &kp LS(E) &kp LPAR &kp O &kp B &kp J &kp E &kp C &kp T>;
+            label = "VALUE";
+        };
     };
 
     keymap {
@@ -386,10 +434,10 @@ ZMK_MACRO(
         default_layer {
             display-name = "alphabet";
             bindings = <
-&none  &mt LG(LS(S)) W  &kp L           &kp Y             &kp P             &mt LA(HOME) B    &kp Z            &mt INSERT F                   &kp O          &kp U      &mt GRAVE SQT  &none
-&none  &kp C            &kp R           &lt NAV S         &lt NUM T         &kp G             &kp M            &kp N                          &kp E          &kp I      &kp A          &none
-&none  &mt LSHIFT Q     &mt LC(FSLH) J  &mt LGUI V        &kp D             &kp K             &kp X            &kp H                          &mt BSLH FSLH  &kp COMMA  &kp DOT        &none
-                                        &mt ENTER K_MENU  &gui_tap 0 SPACE  &lt FUN TAB       &repeat_fun 0 0  &noidlethumb LSHIFT BACKSPACE  &mt LALT RET
+&none  &mt LG(LS(S)) W  &kp L           &kp Y                     &kp P             &mt LA(HOME) B    &kp Z            &mt INSERT F                   &kp O          &kp U      &mt GRAVE SQT  &none
+&none  &kp C            &kp R           &lt NAV S                 &lt NUM T         &kp G             &kp M            &kp N                          &kp E          &kp I      &kp A          &none
+&none  &mt LSHIFT Q     &mt LC(FSLH) J  &mt LGUI V                &kp D             &kp K             &kp X            &kp H                          &mt BSLH FSLH  &kp COMMA  &kp DOT        &none
+                                        &mt K_CONTEXT_MENU ENTER  &gui_tap 0 SPACE  &lt FUN TAB       &repeat_fun 0 0  &noidlethumb LSHIFT BACKSPACE  &mt LALT RET
             >;
         };
 
@@ -399,16 +447,16 @@ ZMK_MACRO(
 &none  &kp CAPSLOCK  &trans     &trans  &kp LC(Z)         &kp LC(Y)    &trans    &trans     &kp UP    &trans     &trans   &none
 &none  &trans        &kp LCTRL  &trans  &mt LSHIFT LC(S)  &kp LC(R)    &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &none
 &none  &trans        &trans     &trans  &kp LC(A)         &trans       &trans    &kp PG_UP  &none     &kp PG_DN  &trans   &none
-                                &trans  &kp LA(TAB)       &trans       &trans    &trans     &trans
+                                &trans  &sk LEFT_ALT      &trans       &trans    &trans     &trans
             >;
         };
 
         num_layer {
             display-name = "number";
             bindings = <
-&none  &none  &none  &none   &none                 &none     &kp GRAVE   &kp N7  &kp N8  &kp N9  &mt FSLH MINUS        &none
-&none  &none  &none  &none   &none                 &none     &kp PERIOD  &kp N4  &kp N5  &kp N6  &kp N0                &none
-&none  &none  &none  &none   &none                 &none     &kp BSLH    &kp N1  &kp N2  &kp N3  &mt LS(N8) LS(EQUAL)  &none
+&none  &none  &none  &none   &none                 &none     &kp GRAVE   &kp N7  &kp N8  &kp N9  &mt FSLH MINUS  &none
+&none  &none  &none  &none   &none                 &none     &kp PERIOD  &kp N4  &kp N5  &kp N6  &kp N0          &none
+&none  &none  &none  &none   &none                 &none     &kp BSLH    &kp N1  &kp N2  &kp N3  &kp DOT         &none
                      &trans  &mt LEFT_SHIFT SPACE  &trans    &trans      &trans  &trans
             >;
         };
