@@ -319,7 +319,7 @@ ZMK_MACRO(
         };
 
         ctrlcopy {
-            bindings = <&kp LC(C)>;
+            bindings = <&ctrl_nav>;
             key-positions = <14 15>;
         };
     };
