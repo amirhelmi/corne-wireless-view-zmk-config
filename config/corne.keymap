@@ -344,7 +344,7 @@ ZMK_MACRO(
         };
 
         versionctrl {
-            bindings = <&none>;
+            bindings = <&versioncontrol>;
             key-positions = <2 3>;
         };
     };
