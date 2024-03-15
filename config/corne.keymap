@@ -322,6 +322,11 @@ ZMK_MACRO(
             bindings = <&ctrl_nav>;
             key-positions = <14 15>;
         };
+
+        shiftpaste {
+            bindings = <&mt A B>;
+            key-positions = <15 16>;
+        };
     };
 
     keymap {
