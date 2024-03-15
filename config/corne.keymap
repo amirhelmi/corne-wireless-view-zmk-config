@@ -286,16 +286,29 @@ ZMK_MACRO(
     combos {
         compatible = "zmk,combos";
 
-        
-
-        rparten {
-            bindings = <&kp RIGHT_BRACE>;
+        rparenth {
+            bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <40 21>;
         };
 
-        tc {
+        taba {
             bindings = <&kp TAB>;
             key-positions = <40 20>;
+        };
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <37 13>;
+        };
+
+        lparenth {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <37 14>;
+        };
+
+        ctrlback {
+            bindings = <&kp LC(BACKSPACE)>;
+            key-positions = <40 22>;
         };
     };
 
