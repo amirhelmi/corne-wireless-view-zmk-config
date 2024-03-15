@@ -6,7 +6,6 @@
 
 #include <dt-bindings/zmk/mouse.h>
 #include "mouse.dtsi"
-#include "corne.dtsi"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
