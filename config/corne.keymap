@@ -39,96 +39,7 @@
 
 &caps_word { continue-list = <UNDERSCORE MINUS BACKSPACE>; };
 
-/ {
-    ZMK_MACRO(info,
-
-    bindings = <&kp I  &kp N &kp F &kp O &kp LS(N9)  &kp SQT &kp FSLH &kp FSLH &kp SQT &kp LS(N0) &kp LEFT>;
-
-    )
-ZMK_MACRO(
-
-    value,
-    bindings = <
-&kp LS(V)  &kp LS(A) &kp LS(L) &kp LS(U) &kp LS(E) &kp LS(N9)  
-&kp O &kp B &kp J &kp E &kp C &kp T &kp LS(N0) &kp LEFT
-    >;
-
-    )
-ZMK_MACRO(
-
-    semiequal,
-    bindings = <&kp LS(SEMI) &kp EQUAL>;
-
-    )
-ZMK_MACRO(
-
-    statement,
-    bindings = <&kp RET &kp LS(LBKT) &kp RET &kp RET &kp LS(RBKT) &kp UP &kp TAB >;
-
-    )
-ZMK_MACRO(
-
-    versioncontrol,
-    bindings = <&kp LA(N1)  &kp LC( LS(TAB)) &kp LA(T)>;
-
-    )
-ZMK_MACRO(
-
-    staticcall,
-    bindings = <&kp LS(SEMI) &kp LS(SEMI) >;
-
-    )
-ZMK_MACRO(
-
-    comment,
-    bindings = < &kp FSLH &kp LS(N8) >;
-
-    )
-ZMK_MACRO(
-
-    usage,
-    bindings = <&kp LC(E) &kp LA(N1) &kp LC(U) >;
-
-    )
-ZMK_MACRO(
-
-    sup,
-    bindings = <
-&kp LS(S) &kp Y &kp N &kp C &kp H &kp R &kp O &kp N &kp I &kp Z &kp E 
-&kp U &kp P &kp G &kp R &kp A &kp D &kp E &kp A &kp B &kp I &kp L &kp I &kp T &kp Y &kp LS(N4) &kp LS(N5) &kp LS(N6) &kp LS(EQUAL)
-    >;
-
-    )
-ZMK_MACRO(
-
-    traverse,
-    bindings = < &kp T &kp R &kp A &kp V &kp E &kp R &kp S &kp E &kp LS(N9) &kp SPACE &kp LS(N0) &kp LEFT>;
-
-    )
-ZMK_MACRO(
-
-    astype,
-    bindings = < &kp A &kp S &kp T &kp Y &kp P &kp E &kp LS(N9) >;
-
-    )
-ZMK_MACRO(
-
-    select,
-    bindings = <&kp S &kp E &kp L &kp E &kp C &kp T  &kp LS(N9) &kp SPACE &kp LS(N0) &kp SEMI &kp LEFT &kp LEFT>;
-
-    )
-ZMK_MACRO(
-
-    amirhelmi,
-    bindings = <&kp A &kp M &kp I &kp R &kp H &kp E &kp L &kp M &kp I &kp DOT &kp A &kp B &kp D &kp H &kp A &kp M &kp I &kp D>;
-
-    )
-ZMK_MACRO(
-
-    parenthesissemi,
-    bindings = < &kp LS(N0) &kp SEMI>;
-
-    )
+/ 
 ZMK_MACRO(
 
     num_gui,
@@ -138,93 +49,8 @@ ZMK_MACRO(
         <&macro_release &mo NUMGUI &kp LGUI>;
 
     )
-ZMK_MACRO(
 
-    selectword,
-    bindings = <&kp LC(LEFT) &kp LC(LS(RIGHT))>;
-
-    )      
-ZMK_MACRO(
-
-    shift_nav,
-    bindings =
-        <&macro_press &mo NAV  &kp LSHFT>,
-        <&macro_pause_for_release>,
-        <&macro_release &mo NAV &kp LSHFT>;
-
-    )
-ZMK_MACRO(
-
-    shift_ctrl_nav,
-    bindings =
-        <&macro_press &mo NAV &kp LCTRL &kp LSHFT>,
-        <&macro_pause_for_release>,
-        <&macro_release &mo NAV &kp LCTRL &kp LSHFT>;
-
-    )  
-ZMK_MACRO(
-
-    ctrl_nav,
-    bindings =
-        <&macro_press &mo NAV &kp LCTRL>,
-        <&macro_pause_for_release>,
-        <&macro_release &mo NAV &kp LCTRL>;
-
-    )
-ZMK_MACRO(
-
-    shift_num,
-    bindings =
-        <&macro_press &mo NUM  &kp LSHFT>,
-        <&macro_pause_for_release>,
-        <&macro_release &mo NUM  &kp LSHFT>;
-
-    ) 
-ZMK_MACRO(
-
-    mo_fun,
-    bindings =
-        <&macro_press &mo FUN >,
-        <&macro_pause_for_release>,
-        <&macro_release &mo FUN>;
-
-    )
-
-    behaviors {
-        hold_shift: hold_shift {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            require-prior-idle-ms = <125>;
-            hold-trigger-on-release;
-            bindings = <&shift_nav>, <&kp>;
-        };
-    };
-
-    behaviors {
-        hold_ctrl: hold_ctrl {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            require-prior-idle-ms = <125>;
-            hold-trigger-on-release;
-            bindings = <&ctrl_nav>, <&kp>;
-        };
-    };
-
-    behaviors {
-        hold_ctrl_shift: hold_ctrl_shift {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            require-prior-idle-ms = <125>;
-            hold-trigger-on-release;
-            bindings = <&shift_ctrl_nav>, <&kp>;
-        };
-    };
+   
 
     behaviors {
         repeat_fun: repeat_fun {
@@ -237,27 +63,7 @@ ZMK_MACRO(
         };
     };
 
-    behaviors {
-        phl: phl {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <125>;
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&kp>;
-        };
-    };
-
-    behaviors {
-        phr: phr {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <125>;
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&kp>;
-        };
-    };
+   
 
     behaviors {
         gui_tap: gui_tap {
