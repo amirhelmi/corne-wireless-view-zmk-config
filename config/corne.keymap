@@ -40,9 +40,10 @@
 &caps_word { continue-list = <UNDERSCORE MINUS BACKSPACE>; };
 
 / {
-ZMK_MACRO(
+    ZMK_MACRO(
 
     num_gui,
+
     bindings =
         <&macro_press &mo NUMGUI &kp LGUI>,
         <&macro_pause_for_release>,
@@ -70,8 +71,6 @@ ZMK_MACRO(
             bindings = <&mo_fun>, <&key_repeat>;
         };
     };
-
-   
 
     behaviors {
         gui_tap: gui_tap {
@@ -185,7 +184,7 @@ ZMK_MACRO(
 
         minus {
             bindings = <&kp MINUS>;
-            key-positions = <31 32>;
+            key-positions = <32 33>;
         };
 
         stickyctrl {
@@ -216,6 +215,11 @@ ZMK_MACRO(
         statementcombo {
             bindings = <&statement>;
             key-positions = <40 9>;
+        };
+
+        shifttab {
+            bindings = <&kp LS(TAB)>;
+            key-positions = <37 38>;
         };
     };
 
@@ -248,10 +252,10 @@ ZMK_MACRO(
         default_layer {
             display-name = "alphabet";
             bindings = <
-&none  &mt LG(LS(S)) W  &kp L           &kp Y                     &kp P             &mt LA(HOME) B    &kp Z            &mt INSERT F                   &kp O          &kp U      &mt GRAVE SQT  &none
-&none  &kp C            &kp R           &lt NAV S                 &lt NUM T         &kp G             &kp M            &kp N                          &kp E          &kp I      &kp A          &none
-&none  &mt LSHIFT Q     &mt LC(FSLH) J  &mt LGUI V                &kp D             &kp K             &kp X            &kp H                          &mt BSLH FSLH  &kp COMMA  &kp DOT        &none
-                                        &mt K_CONTEXT_MENU ENTER  &gui_tap 0 SPACE  &lt FUN TAB       &repeat_fun 0 0  &noidlethumb LSHIFT BACKSPACE  &mt LALT RET
+&none  &mt LG(LS(S)) W  &kp L           &kp Y            &kp P             &mt LA(HOME) B    &kp Z            &mt INSERT F                   &kp O          &kp U      &mt GRAVE SQT  &none
+&none  &kp C            &kp R           &lt NAV S        &lt NUM T         &kp G             &kp M            &kp N                          &kp E          &kp I      &kp A          &none
+&none  &mt LSHIFT Q     &mt LC(FSLH) J  &mt LGUI V       &kp D             &kp K             &kp X            &kp H                          &mt BSLH FSLH  &kp COMMA  &kp DOT        &none
+                                        &mt LCTRL ENTER  &gui_tap 0 SPACE  &lt FUN TAB       &repeat_fun 0 0  &noidlethumb LSHIFT BACKSPACE  &mt LALT RET
             >;
         };
 
@@ -288,10 +292,10 @@ ZMK_MACRO(
         fun_layer {
             display-name = "function";
             bindings = <
-&none  &none            &none      &kp LA(UP)    &none      &none         &kp F12  &kp F7  &kp F8  &kp F9  &none  &none
-&none  &kp LC(LA(TAB))  &kp LC(R)  &kp LA(DOWN)  &kp LC(E)  &kp LC(T)     &kp F11  &kp F4  &kp F5  &kp F6  &none  &none
-&none  &kp LC(Q)        &kp LC(J)  &kp LC(U)     &kp LC(D)  &kp LC(F4)    &kp F10  &kp F1  &kp F2  &kp F3  &none  &none
-                                   &trans        &trans     &trans        &trans   &trans  &trans
+&none  &none            &none      &kp LA(UP)        &kp LA(DOWN)  &none         &kp F12  &kp F7  &kp F8  &kp F9  &bt BT_SEL 0  &none
+&none  &kp LC(LA(TAB))  &kp LC(R)  &kp LA(NUMBER_1)  &kp LC(E)     &kp LC(T)     &kp F11  &kp F4  &kp F5  &kp F6  &bt BT_SEL 1  &none
+&none  &kp LC(Q)        &kp LC(J)  &kp LC(U)         &kp LC(D)     &kp LC(F4)    &kp F10  &kp F1  &kp F2  &kp F3  &none         &none
+                                   &trans            &trans        &trans        &trans   &trans  &trans
             >;
         };
     };
