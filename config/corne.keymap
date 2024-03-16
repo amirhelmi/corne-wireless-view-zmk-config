@@ -152,8 +152,8 @@
             key-positions = <19 40>;
         };
 
-        stickshift {
-            bindings = <&sk LEFT_SHIFT>;
+        menuenter {
+            bindings = <&mt K_CONTEXT_MENU ENTER>;
             key-positions = <37 16>;
         };
 
@@ -252,10 +252,10 @@
         default_layer {
             display-name = "alphabet";
             bindings = <
-&none  &mt LG(LS(S)) W  &kp L           &kp Y            &kp P             &mt LA(HOME) B    &kp Z            &mt INSERT F                   &kp O          &kp U      &mt GRAVE SQT  &none
-&none  &kp C            &kp R           &lt NAV S        &lt NUM T         &kp G             &kp M            &kp N                          &kp E          &kp I      &kp A          &none
-&none  &mt LSHIFT Q     &mt LC(FSLH) J  &mt LGUI V       &kp D             &kp K             &kp X            &kp H                          &mt BSLH FSLH  &kp COMMA  &kp DOT        &none
-                                        &mt LCTRL ENTER  &gui_tap 0 SPACE  &lt FUN TAB       &repeat_fun 0 0  &noidlethumb LSHIFT BACKSPACE  &mt LALT RET
+&none  &mt LG(LS(S)) W  &kp L           &kp Y           &kp P             &mt LA(HOME) B    &kp Z            &mt INSERT F                   &kp O          &kp U      &mt GRAVE SQT  &none
+&none  &kp C            &kp R           &lt NAV S       &lt NUM T         &kp G             &kp M            &kp N                          &kp E          &kp I      &kp A          &none
+&none  &mt LSHIFT Q     &mt LC(FSLH) J  &mt LGUI V      &kp D             &kp K             &kp X            &kp H                          &mt BSLH FSLH  &kp COMMA  &kp DOT        &none
+                                        &sk LEFT_SHIFT  &gui_tap 0 SPACE  &lt FUN TAB       &repeat_fun 0 0  &noidlethumb LSHIFT BACKSPACE  &mt LALT RET
             >;
         };
 
