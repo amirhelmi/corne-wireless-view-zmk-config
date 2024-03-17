@@ -16,6 +16,7 @@
 #define NUM 2
 #define NUMGUI 3
 #define FUN 4
+#define MOUSE 5
 
 #define COMBO(NAME,TIMEOUT, BINDINGS, KEYPOS) \
   combo_##NAME { \
@@ -255,7 +256,7 @@
             display-name = "alphabet";
             bindings = <
 &none  &mt LG(LS(S)) W  &kp L           &kp Y           &kp P             &mt LA(HOME) B    &kp Z            &mt INSERT F                   &kp O          &kp U      &mt GRAVE SQT  &none
-&none  &kp C            &kp R           &lt NAV S       &lt NUM T         &kp G             &kp M            &kp N                          &kp E          &kp I      &kp A          &none
+&none  &kp C            &lt MOUSE R           &lt NAV S       &lt NUM T         &kp G             &kp M            &kp N                          &kp E          &kp I      &kp A          &none
 &none  &mt LSHIFT Q     &mt LC(FSLH) J  &mt LGUI V      &kp D             &kp K             &kp X            &kp H                          &mt BSLH FSLH  &kp COMMA  &kp DOT        &none
                                         &sk LEFT_SHIFT  &gui_tap 0 SPACE  &lt FUN TAB       &repeat_fun 0 0  &noidlethumb LSHIFT BACKSPACE  &mt LALT RET
             >;
@@ -300,5 +301,17 @@
                                    &trans            &trans        &trans        &trans   &trans  &trans
             >;
         };
+
+        mouse_layer {
+            display-name = "mouse";
+            bindings = <
+&none  &none  &none  &none   &none  &none    &msc SCROLL_UP    &trans          &mmv MOVE_UP    &trans           &trans  &trans
+&none  &none  &none  &none   &none  &none    &msc SCROLL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&none  &none  &none  &none   &none  &none    &none  &none  &none  &none   &none  &none
+                     &trans  &trans  &trans    &trans      &trans  &trans
+            >;
+        };
+
+
     };
 };
