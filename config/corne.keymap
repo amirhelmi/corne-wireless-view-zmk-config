@@ -4,12 +4,11 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <dt-bindings/zmk/mouse.h>
+#include "mouse.dtsi"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
-#include "mouse.dtsi"
-#include <dt-bindings/zmk/ext_power.h>
 
 #define BASE 0
 #define NAV  1
@@ -127,12 +126,12 @@
 
         lboot {
             bindings = <&bootloader>;
-            key-positions = <14 16 37>;
+            key-positions = <13 17 38>;
         };
 
         rboot {
             bindings = <&bootloader>;
-            key-positions = <40 19 21>;
+            key-positions = <18 39 22>;
         };
 
         ctrlcopy {
@@ -234,6 +233,11 @@
             bindings = <&kp INSERT>;
             key-positions = <4 37>;
         };
+
+        righttab {
+            bindings = <&kp TAB>;
+            key-positions = <28 27>;
+        };
     };
 
     macros {
@@ -247,7 +251,7 @@
         statement: statement {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RET &kp LEFT_BRACE &kp RET &kp RBRC &kp UP_ARROW &kp ENTER>;
+            bindings = <&kp RET &kp LEFT_BRACE &kp RET &kp RBRC &kp UP_ARROW &kp ENTER &kp TAB>;
             label = "STATEMENT";
         };
 
@@ -261,14 +265,14 @@
         versionctrl: versionctrl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(NUMBER_1) &kp LC(TAB) &kp LC(T)>;
+            bindings = <&kp LA(NUMBER_1) &kp LC(TAB) &kp LA(T)>;
             label = "VERSIONCTRL";
         };
 
         slogan: slogan {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(S) &kp Y &kp N &kp C &kp H &kp R &kp O &kp N &kp I &kp Z &kp E &kp U &kp P &kp G &kp R &kp A &kp D &kp E &kp A &kp B &kp I &kp L &kp I &kp T &kp Y &kp DLLR &kp GRAVE &kp PRCNT &kp CARET &kp PLUS>;
+            bindings = <&kp LS(S) &kp Y &kp N &kp C &kp H &kp R &kp O &kp N &kp I &kp Z &kp E &kp U &kp P &kp G &kp R &kp A &kp D &kp E &kp A &kp B &kp I &kp L &kp I &kp T &kp Y &kp DLLR &kp PRCNT &kp CARET &kp PLUS>;
             label = "SLOGAN";
         };
     };
