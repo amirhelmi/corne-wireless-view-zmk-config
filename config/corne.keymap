@@ -4,11 +4,10 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <behaviors.dtsi>
 #include <dt-bindings/zmk/mouse.h>
 #include "mouse.dtsi"
+#include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 
 #define BASE 0
@@ -224,6 +223,16 @@
             bindings = <&kp LS(TAB)>;
             key-positions = <37 38>;
         };
+
+        capsword {
+            bindings = <&caps_word>;
+            key-positions = <36 37>;
+        };
+
+        insert {
+            bindings = <&kp INSERT>;
+            key-positions = <4 37>;
+        };
     };
 
     macros {
@@ -256,7 +265,7 @@
             display-name = "alphabet";
             bindings = <
 &none  &mt LG(LS(S)) W  &kp L           &kp Y           &kp P             &mt LA(HOME) B    &kp Z            &mt INSERT F                   &kp O          &kp U      &mt GRAVE SQT  &none
-&none  &kp C            &lt MOUSE R           &lt NAV S       &lt NUM T         &kp G             &kp M            &kp N                          &kp E          &kp I      &kp A          &none
+&none  &kp C            &lt MOUSE R     &lt NAV S       &lt NUM T         &kp G             &kp M            &kp N                          &kp E          &kp I      &kp A          &none
 &none  &mt LSHIFT Q     &mt LC(FSLH) J  &mt LGUI V      &kp D             &kp K             &kp X            &kp H                          &mt BSLH FSLH  &kp COMMA  &kp DOT        &none
                                         &sk LEFT_SHIFT  &gui_tap 0 SPACE  &lt FUN TAB       &repeat_fun 0 0  &noidlethumb LSHIFT BACKSPACE  &mt LALT RET
             >;
@@ -305,13 +314,11 @@
         mouse_layer {
             display-name = "mouse";
             bindings = <
-&none  &none  &none  &none   &none  &none    &msc SCROLL_UP    &trans          &mmv MOVE_UP    &trans           &trans  &trans
-&none  &none  &none  &none   &none  &none    &msc SCROLL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&none  &none  &none  &none   &none  &none    &none  &none  &none  &none   &none  &none
-                     &trans  &trans  &trans    &trans      &trans  &trans
+&none  &none  &none  &none   &none   &none     &msc SCROLL_UP    &trans          &mmv MOVE_UP    &trans           &trans  &trans
+&none  &none  &none  &none   &none   &none     &msc SCROLL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&none  &none  &none  &none   &none   &none     &none             &none           &none           &none            &none   &none
+                     &trans  &trans  &trans    &trans            &trans          &trans
             >;
         };
-
-
     };
 };
