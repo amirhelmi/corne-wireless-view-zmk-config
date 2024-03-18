@@ -4,13 +4,11 @@
  * SPDX-License-Identifier: MIT
  */
 
-
+#include <dt-bindings/zmk/mouse.h>
+#include "mouse.dtsi"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/ext_power.h>
-#include <dt-bindings/zmk/mouse.h>
-#include "mouse.dtsi"
 
 #define BASE 0
 #define NAV  1
@@ -280,10 +278,10 @@
         default_layer {
             display-name = "alphabet";
             bindings = <
-&none  &mt LG(LS(S)) W  &kp L           &kp Y       &kp P             &mt LA(HOME) B    &kp Z        &mt INSERT F    &kp O               &kp U      &mt GRAVE SQT  &none
-&none  &kp C            &lt MOUSE R     &lt NAV S   &lt NUM T         &kp G             &kp M        &kp N           &kp E               &kp I      &kp A          &none
-&none  &mt LSHIFT Q     &mt LC(FSLH) J  &mt LGUI V  &kp D             &kp K             &kp X        &kp H           &mt BSLH FSLH       &kp COMMA  &kp DOT        &none
-                                        &sl 4       &gui_tap 0 SPACE  &kp TAB           &key_repeat  &sk LEFT_SHIFT  &mt LALT BACKSPACE
+&none  &mt LG(LS(S)) W  &kp L           &kp Y       &kp P             &mt LA(HOME) B        &kp Z        &mt INSERT F              &kp O           &kp U      &mt GRAVE SQT  &none
+&none  &kp C            &lt MOUSE R     &lt NAV S   &lt NUM T         &kp G                 &kp M        &kp N                     &kp E           &kp I      &kp A          &none
+&none  &mt LSHIFT Q     &mt LC(FSLH) J  &mt LGUI V  &kp D             &kp K                 &kp X        &kp H                     &mt BSLH FSLH   &kp COMMA  &kp DOT        &none
+                                        &sl 4       &gui_tap 0 SPACE  &mt LEFT_SHIFT TAB    &key_repeat  &mt LEFT_SHIFT BACKSPACE  &mt LALT ENTER
             >;
         };
 
