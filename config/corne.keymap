@@ -4,12 +4,12 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/mouse.h>
 #include "mouse.dtsi"
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
 
 #define BASE 0
 #define NAV  1
@@ -234,6 +234,16 @@
             bindings = <&kp TAB>;
             key-positions = <28 27>;
         };
+
+        q {
+            bindings = <&kp Q>;
+            key-positions = <25 14>;
+        };
+
+        dot {
+            bindings = <&kp DOT>;
+            key-positions = <34 21>;
+        };
     };
 
     macros {
@@ -279,10 +289,10 @@
         default_layer {
             display-name = "alphabet";
             bindings = <
-&none  &mt LG(LS(S)) W  &kp L           &kp Y       &kp P             &mt LA(HOME) B        &kp Z        &mt INSERT F              &kp O           &kp U      &mt GRAVE SQT  &none
-&none  &kp C            &lt MOUSE R     &lt NAV S   &lt NUM T         &kp G                 &kp M        &kp N                     &kp E           &kp I      &kp A          &none
-&none  &mt LSHIFT Q     &mt LC(FSLH) J  &mt LGUI V  &kp D             &kp K                 &kp X        &kp H                     &mt BSLH FSLH   &kp COMMA  &kp DOT        &none
-                                        &sl 4       &gui_tap 0 SPACE  &mt LEFT_SHIFT TAB    &key_repeat  &mt LEFT_SHIFT BACKSPACE  &mt LALT ENTER
+&none  &mt LG(LS(S)) LA(NUMBER_1)  &kp L           &kp Y       &kp P             &mt LA(HOME) B        &kp Z        &mt INSERT F              &kp O           &kp U      &kp INSERT      &none
+&none  &kp W                       &lt MOUSE R     &lt NAV S   &lt NUM T         &kp G                 &kp M        &kp N                     &kp E           &kp I      &mt GRAVE APOS  &none
+&none  &kp C                       &mt LC(FSLH) J  &mt LGUI V  &kp D             &kp K                 &kp X        &kp H                     &mt BSLH FSLH   &kp COMMA  &kp A           &none
+                                                   &sl 4       &gui_tap 0 SPACE  &mt LEFT_SHIFT TAB    &key_repeat  &mt LEFT_SHIFT BACKSPACE  &mt LALT ENTER
             >;
         };
 
@@ -319,10 +329,10 @@
         fun_layer {
             display-name = "function";
             bindings = <
-&none  &none      &versionctrl  &kp LA(UP)        &kp LA(DOWN)  &slogan       &kp F12  &kp F7  &kp F8  &kp F9  &bt BT_SEL 0  &none
-&none  &kp LA(D)  &kp LC(R)     &kp LA(NUMBER_1)  &kp LC(E)     &kp LC(T)     &kp F11  &kp F4  &kp F5  &kp F6  &bt BT_SEL 1  &none
-&none  &kp LC(Q)  &kp LC(J)     &kp LC(U)         &kp LC(D)     &kp LC(F4)    &kp F10  &kp F1  &kp F2  &kp F3  &none         &none
-                                &trans            &trans        &trans        &trans   &trans  &trans
+&none  &none      &versionctrl  &kp LA(UP)  &kp LA(DOWN)       &slogan       &kp F12  &kp F7  &kp F8  &kp F9  &bt BT_SEL 0  &none
+&none  &kp LA(D)  &kp LC(R)     &kp LC(D)   &kp LC(E)          &kp LC(T)     &kp F11  &kp F4  &kp F5  &kp F6  &bt BT_SEL 1  &none
+&none  &kp LC(Q)  &kp LC(J)     &kp LC(U)   &ext_power EP_TOG  &kp LC(F4)    &kp F10  &kp F1  &kp F2  &kp F3  &none         &none
+                                &trans      &trans             &trans        &trans   &trans  &trans
             >;
         };
 
