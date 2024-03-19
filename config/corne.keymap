@@ -279,9 +279,9 @@
         default_layer {
             display-name = "alphabet";
             bindings = <
-&none  &mt LG(LS(S)) LA(NUMBER_1)  &kp L           &kp Y       &kp P             &mt LA(HOME) B        &kp Z        &mt INSERT F              &kp O           &kp U    &mt BACKSLASH SLASH  &none
-&none  &kp W                       &lt MOUSE R     &lt NAV S   &lt NUM T         &kp G                 &kp M        &kp N                     &kp E           &kp I    &mt GRAVE APOS       &none
-&none  &kp C                       &mt LC(FSLH) J  &mt LGUI V  &kp D             &kp K                 &kp X        &kp H                     &kp COMMA       &kp DOT  &kp A                &none
+&none  &mt LG(LS(S)) LA(NUMBER_1)  &kp L           &kp Y       &kp P             &mt LA(HOME) B        &kp Z        &mt INSERT F              &kp O           &kp U      &mt BACKSLASH SLASH  &none
+&none  &kp W                       &lt MOUSE R     &lt NAV S   &lt NUM T         &kp G                 &kp M        &kp N                     &kp E           &kp I      &mt GRAVE APOS       &none
+&none  &kp C                       &mt LC(FSLH) J  &mt LGUI V  &kp D             &kp K                 &kp X        &kp H                     &kp DOT         &kp COMMA  &kp A                &none
                                                    &sl 4       &gui_tap 0 SPACE  &mt LEFT_SHIFT TAB    &key_repeat  &mt LEFT_SHIFT BACKSPACE  &mt LALT ENTER
             >;
         };
