@@ -4,11 +4,12 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 #include "mouse.dtsi"
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
 
 #define BASE 0
 #define NAV  1
@@ -318,10 +319,10 @@
         fun_layer {
             display-name = "function";
             bindings = <
-&none  &none      &versionctrl  &kp LA(UP)  &kp LA(DOWN)       &slogan       &kp F12  &kp F7  &kp F8  &kp F9  &bt BT_SEL 0  &none
-&none  &kp LA(D)  &kp LC(R)     &kp LC(D)   &kp LC(E)          &kp LC(T)     &kp F11  &kp F4  &kp F5  &kp F6  &bt BT_SEL 1  &none
-&none  &kp LC(Q)  &kp LC(J)     &kp LC(U)   &none              &kp LC(F4)    &kp F10  &kp F1  &kp F2  &kp F3  &none         &none
-                                &trans      &trans             &trans        &trans   &trans  &trans
+&none  &none      &versionctrl  &kp LA(UP)  &kp LA(DOWN)  &slogan       &kp F12  &kp F7  &kp F8  &kp F9  &bt BT_SEL 0  &none
+&none  &kp LA(D)  &kp LC(R)     &kp LC(D)   &kp LC(E)     &kp LC(T)     &kp F11  &kp F4  &kp F5  &kp F6  &bt BT_SEL 1  &none
+&none  &kp LC(Q)  &kp LC(J)     &kp LC(U)   &none         &kp LC(F4)    &kp F10  &kp F1  &kp F2  &kp F3  &none         &none
+                                &trans      &trans        &trans        &trans   &trans  &trans
             >;
         };
 
@@ -330,7 +331,7 @@
             bindings = <
 &none  &none  &none  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &none     &msc SCROLL_UP    &trans          &mmv MOVE_UP    &trans           &trans  &trans
 &none  &none  &none  &kp C_BRI_DEC         &kp C_VOLUME_DOWN  &none     &msc SCROLL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&none  &none  &none  &none                 &none              &none     &none             &none           &none           &none            &none   &none
+&none  &none  &none  &none                 &ext_power EP_ON   &none     &none             &none           &none           &none            &none   &none
                      &trans                &trans             &trans    &trans            &trans          &trans
             >;
         };
