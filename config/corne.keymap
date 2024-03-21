@@ -107,7 +107,7 @@
 
         taba {
             bindings = <&kp TAB>;
-            key-positions = <40 20>;
+            key-positions = <7 19>;
         };
 
         escape {
@@ -122,7 +122,7 @@
 
         ctrlback {
             bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <19 20 21>;
+            key-positions = <19 21>;
         };
 
         lboot {
@@ -162,7 +162,7 @@
 
         semicolon {
             bindings = <&kp SEMICOLON>;
-            key-positions = <40 19>;
+            key-positions = <40 34>;
         };
 
         rightclick {
@@ -187,17 +187,17 @@
 
         stickyctrl {
             bindings = <&sk LEFT_CONTROL>;
-            key-positions = <37 15>;
+            key-positions = <4 16>;
         };
 
         colonn {
             bindings = <&kp COLON>;
-            key-positions = <4 16>;
+            key-positions = <40 19>;
         };
 
         equal {
             bindings = <&kp EQUAL>;
-            key-positions = <7 19>;
+            key-positions = <20 40>;
         };
 
         slash {
@@ -227,7 +227,7 @@
 
         insert {
             bindings = <&kp INSERT>;
-            key-positions = <4 37>;
+            key-positions = <37 15>;
         };
 
         q {
