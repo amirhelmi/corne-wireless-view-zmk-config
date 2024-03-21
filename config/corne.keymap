@@ -122,7 +122,7 @@
 
         ctrlback {
             bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <40 34>;
+            key-positions = <19 20 21>;
         };
 
         lboot {
@@ -200,14 +200,14 @@
             key-positions = <7 19>;
         };
 
-        infocombo {
-            bindings = <&info>;
+        slash {
+            bindings = <&mt BACKSLASH SLASH>;
             key-positions = <9 21>;
         };
 
-        valuecombo {
-            bindings = <&value>;
-            key-positions = <2 14>;
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <19 20>;
         };
 
         statementcombo {
@@ -232,7 +232,7 @@
 
         q {
             bindings = <&kp Q>;
-            key-positions = <27 28>;
+            key-positions = <2 14>;
         };
     };
 
@@ -279,10 +279,10 @@
         default_layer {
             display-name = "alphabet";
             bindings = <
-&none  &mt LG(LS(S)) LA(NUMBER_1)  &kp L           &kp Y       &kp P             &mt LA(HOME) B        &kp Z        &mt INSERT F              &kp O           &kp U      &mt BACKSLASH SLASH  &none
-&none  &kp W                       &lt MOUSE R     &lt NAV S   &lt NUM T         &kp G                 &kp M        &kp N                     &kp E           &kp I      &mt GRAVE APOS       &none
-&none  &kp C                       &mt LC(FSLH) J  &mt LGUI V  &kp D             &kp K                 &kp X        &kp H                     &kp DOT         &kp COMMA  &kp A                &none
-                                                   &sl 4       &gui_tap 0 SPACE  &mt LEFT_SHIFT TAB    &key_repeat  &mt LEFT_SHIFT BACKSPACE  &mt LALT ENTER
+&none  &mt LG(LS(S)) LA(NUMBER_1)  &kp L           &kp Y       &kp P             &mt LA(HOME) B        &kp Z        &mt INSERT F    &kp O           &kp U      &value          &none
+&none  &kp W                       &lt MOUSE R     &lt NAV S   &lt NUM T         &kp G                 &kp M        &kp N           &kp E           &kp I      &mt GRAVE APOS  &none
+&none  &kp C                       &mt LC(FSLH) J  &mt LGUI V  &kp D             &kp K                 &kp X        &kp H           &kp DOT         &kp COMMA  &kp A           &none
+                                                   &sl 4       &gui_tap 0 SPACE  &mt LEFT_SHIFT TAB    &key_repeat  &sk LEFT_SHIFT  &mt LALT ENTER
             >;
         };
 
@@ -319,10 +319,10 @@
         fun_layer {
             display-name = "function";
             bindings = <
-&none  &none      &versionctrl  &kp LA(UP)  &kp LA(DOWN)  &slogan       &kp F12  &kp F7  &kp F8  &kp F9  &bt BT_SEL 0  &none
-&none  &kp LA(D)  &kp LC(R)     &kp LC(D)   &kp LC(E)     &kp LC(T)     &kp F11  &kp F4  &kp F5  &kp F6  &bt BT_SEL 1  &none
-&none  &kp LC(Q)  &kp LC(J)     &kp LC(U)   &none         &kp LC(F4)    &kp F10  &kp F1  &kp F2  &kp F3  &none         &none
-                                &trans      &trans        &trans        &trans   &trans  &trans
+&none    &none      &versionctrl  &kp LA(UP)  &kp LA(DOWN)  &none         &kp F12  &kp F7  &kp F8  &kp F9  &bt BT_SEL 0  &none
+&slogan  &kp LA(D)  &kp LC(R)     &kp LC(D)   &kp LC(E)     &kp LC(T)     &kp F11  &kp F4  &kp F5  &kp F6  &bt BT_SEL 1  &none
+&none    &kp LC(Q)  &kp LC(J)     &kp LC(U)   &none         &kp LC(F4)    &kp F10  &kp F1  &kp F2  &kp F3  &none         &none
+                                  &trans      &trans        &trans        &trans   &trans  &trans
             >;
         };
 
