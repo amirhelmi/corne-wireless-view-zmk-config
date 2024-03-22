@@ -107,7 +107,7 @@
 
         taba {
             bindings = <&kp TAB>;
-            key-positions = <7 19>;
+            key-positions = <19 20>;
         };
 
         escape {
@@ -208,7 +208,7 @@
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <19 20>;
+            key-positions = <19 7>;
             require-prior-idle-ms = <150>;
         };
 
