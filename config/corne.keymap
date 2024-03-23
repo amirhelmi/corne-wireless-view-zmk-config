@@ -37,7 +37,7 @@
     flavor = "balanced";
     tapping-term-ms = <200>;
     hold-trigger-on-release;
-    require-prior-idle-ms = <150>;
+    require-prior-idle-ms = <180>;
 };
 
 &caps_word { continue-list = <UNDERSCORE MINUS BACKSPACE>; };
@@ -151,9 +151,9 @@
             key-positions = <28 26>;
         };
 
-        menuenter {
-            bindings = <&mt K_CONTEXT_MENU ENTER>;
-            key-positions = <37 16>;
+        menu {
+            bindings = <&kp K_CONTEXT_MENU>;
+            key-positions = <37 15>;
         };
 
         click {
@@ -201,7 +201,7 @@
             key-positions = <20 40>;
         };
 
-        slash {
+        value {
             bindings = <&mt BACKSLASH SLASH>;
             key-positions = <9 21>;
         };
@@ -229,7 +229,7 @@
 
         insert {
             bindings = <&kp INSERT>;
-            key-positions = <37 15>;
+            key-positions = <37 16>;
         };
 
         q {
@@ -281,10 +281,10 @@
         default_layer {
             display-name = "alphabet";
             bindings = <
-&none  &mt LG(LS(S)) LA(NUMBER_1)  &kp L           &kp Y       &kp P             &mt LA(HOME) B        &kp Z        &mt INSERT F    &kp O           &kp U      &value          &none
-&none  &kp W                       &lt MOUSE R     &lt NAV S   &lt NUM T         &kp G                 &kp M        &kp N           &kp E           &kp I      &mt GRAVE APOS  &none
-&none  &kp C                       &mt LC(FSLH) J  &mt LGUI V  &kp D             &kp K                 &kp X        &kp H           &kp DOT         &kp COMMA  &kp A           &none
-                                                   &sl 4       &gui_tap 0 SPACE  &mt LEFT_SHIFT TAB    &key_repeat  &sk LEFT_SHIFT  &mt LALT ENTER
+&none  &mt LG(LS(S)) LA(NUMBER_1)  &kp L           &kp Y             &kp P        &mt LA(HOME) B        &kp Z        &kp F           &kp O           &kp U      &mt NON_US_BACKSLASH SLASH  &none
+&none  &kp W                       &lt MOUSE R     &lt NAV S         &lt NUM T    &kp G                 &kp M        &kp N           &kp E           &kp I      &mt GRAVE APOS              &none
+&none  &kp C                       &mt LC(FSLH) J  &mt LGUI V        &kp D        &kp K                 &kp X        &kp H           &kp DOT         &kp COMMA  &kp A                       &none
+                                                   &gui_tap 0 ENTER  &lt 4 SPACE  &mt LEFT_SHIFT TAB    &key_repeat  &sk LEFT_SHIFT  &mt LALT ENTER
             >;
         };
 
@@ -292,8 +292,8 @@
             display-name = "navigation";
             bindings = <
 &none  &kp CAPSLOCK  &trans     &trans  &kp LC(Z)         &kp LC(Y)    &trans    &trans     &kp UP    &trans     &trans   &none
-&none  &trans        &kp LCTRL  &trans  &mt LSHIFT LC(S)  &kp LC(R)    &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &none
-&none  &trans        &trans     &trans  &kp LC(A)         &trans       &trans    &kp PG_UP  &none     &kp PG_DN  &trans   &none
+&none  &trans        &kp LCTRL  &trans  &mt LSHIFT LC(S)  &kp LC(R)    &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &none    &none
+&none  &trans        &trans     &trans  &kp LC(A)         &trans       &trans    &kp PG_UP  &none     &kp PG_DN  &kp END  &none
                                 &trans  &sk LEFT_ALT      &trans       &trans    &trans     &trans
             >;
         };
@@ -302,7 +302,7 @@
             display-name = "number";
             bindings = <
 &none  &none  &none  &none   &none                 &none     &kp GRAVE   &kp N7  &kp N8  &kp N9  &mt FSLH MINUS  &none
-&none  &none  &none  &none   &none                 &none     &kp PERIOD  &kp N4  &kp N5  &kp N6  &kp N0          &none
+&none  &none  &none  &none   &none                 &none     &kp PERIOD  &kp N4  &kp N5  &kp N6  &none           &none
 &none  &none  &none  &none   &none                 &none     &kp BSLH    &kp N1  &kp N2  &kp N3  &kp N0          &none
                      &trans  &mt LEFT_SHIFT SPACE  &trans    &trans      &trans  &trans
             >;
