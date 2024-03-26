@@ -37,7 +37,7 @@
     flavor = "balanced";
     tapping-term-ms = <200>;
     hold-trigger-on-release;
-    require-prior-idle-ms = <180>;
+    require-prior-idle-ms = <170>;
 };
 
 &caps_word { continue-list = <UNDERSCORE MINUS BACKSPACE>; };
