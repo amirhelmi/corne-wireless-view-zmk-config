@@ -220,7 +220,6 @@
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <19 7>;
-            require-prior-idle-ms = <150>;
         };
 
         statementcombo {
