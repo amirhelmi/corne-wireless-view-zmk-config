@@ -34,10 +34,8 @@
 };
 
 &lt {
-    flavor = "balanced";
-    tapping-term-ms = <200>;
     hold-trigger-on-release;
-    require-prior-idle-ms = <170>;
+    require-prior-idle-ms = <180>;
 };
 
 &caps_word { continue-list = <UNDERSCORE MINUS BACKSPACE>; };
@@ -119,6 +117,8 @@
         dot {
             bindings = <&kp DOT>;
             key-positions = <19 20>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <190>;
         };
 
         escape {
@@ -144,17 +144,17 @@
         };
 
         paste {
-            bindings = <&kp LC(V)>;
+            bindings = <&mt LCTRL LC(V)>;
             key-positions = <15 16>;
         };
 
         dele {
             bindings = <&kp DEL>;
-            key-positions = <28 26>;
+            key-positions = <28 27>;
         };
 
         menu {
-            bindings = <&kp K_CONTEXT_MENU>;
+            bindings = <&kp LA(SPACE)>;
             key-positions = <37 15>;
         };
 
@@ -206,11 +206,15 @@
         value {
             bindings = <&value>;
             key-positions = <9 21>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <190>;
         };
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <19 7>;
+            key-positions = <20 21>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <190>;
         };
 
         statementcombo {
@@ -220,7 +224,7 @@
 
         shifttab {
             bindings = <&kp LS(TAB)>;
-            key-positions = <37 38>;
+            key-positions = <38 39>;
         };
 
         capsword {
@@ -235,7 +239,17 @@
 
         q {
             bindings = <&kp Q>;
-            key-positions = <2 14>;
+            key-positions = <3 15>;
+        };
+
+        plus {
+            bindings = <&kp PLUS>;
+            key-positions = <6 18>;
+        };
+
+        lbackspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <26 27>;
         };
     };
 
@@ -282,20 +296,20 @@
         default_layer {
             display-name = "alphabet";
             bindings = <
-&none  &mt LG(LS(S)) LA(NUMBER_1)  &kp L           &kp Y             &kp P        &mt LA(HOME) B                &kp Z      &kp F                       &kp O                &kp U      &mt AT_SIGN EXCLAMATION  &none
-&none  &kp W                       &lt MOUSE R     &lt NAV S         &lt NUM T    &kp G                         &kp M      &kp N                       &kp E                &kp I      &mt GRAVE APOS           &none
-&none  &kp C                       &mt LC(FSLH) J  &mt LGUI V        &kp D        &kp K                         &kp X      &kp H                       &mt BACKSLASH SLASH  &kp COMMA  &kp A                    &none
-                                                   &gui_tap 0 ENTER  &lt 4 SPACE  &repeat_shift LEFT_SHIFT 0    &lt 4 TAB  &repeat_shift LEFT_SHIFT 0  &mt LALT ENTER
+&none  &mt LG(LS(S)) LA(NUMBER_1)  &kp L           &kp Y             &kp P        &mt LA(HOME) B                &kp Z               &kp F                       &kp O                &kp U      &mt AT_SIGN EXCLAMATION  &none
+&none  &kp W                       &lt MOUSE R     &lt NAV S         &lt NUM T    &mt LESS_THAN G               &mt GREATER_THAN M  &kp N                       &kp E                &kp I      &mt GRAVE APOS           &none
+&none  &kp C                       &mt LC(FSLH) J  &mt LGUI V        &kp D        &kp K                         &kp X               &kp H                       &mt BACKSLASH SLASH  &kp COMMA  &kp A                    &none
+                                                   &gui_tap 0 ENTER  &lt 4 SPACE  &repeat_shift LEFT_SHIFT 0    &lt 4 TAB           &repeat_shift LEFT_SHIFT 0  &mt LALT ENTER
             >;
         };
 
         nav_layer {
             display-name = "navigation";
             bindings = <
-&none  &kp CAPSLOCK  &trans     &trans  &kp LC(Z)         &kp LC(Y)    &trans    &trans     &kp UP    &trans     &trans   &none
-&none  &trans        &kp LCTRL  &trans  &mt LSHIFT LC(S)  &kp LC(R)    &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &none    &none
-&none  &trans        &trans     &trans  &kp LC(A)         &trans       &trans    &kp PG_UP  &none     &kp PG_DN  &kp END  &none
-                                &trans  &sk LEFT_ALT      &trans       &trans    &trans     &trans
+&none  &kp CAPSLOCK  &trans     &trans  &kp LC(Z)       &kp LC(Y)    &trans    &trans     &kp UP    &trans     &trans   &none
+&none  &trans        &kp LCTRL  &trans  &kp LEFT_SHIFT  &kp LC(R)    &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &none    &none
+&none  &trans        &trans     &trans  &kp LC(A)       &trans       &trans    &kp PG_UP  &none     &kp PG_DN  &kp END  &none
+                                &trans  &sk LEFT_ALT    &trans       &trans    &trans     &trans
             >;
         };
 
@@ -322,20 +336,20 @@
         fun_layer {
             display-name = "function";
             bindings = <
-&none  &bootloader  &versionctrl  &kp LA(UP)  &kp LA(DOWN)  &slogan       &kp F12  &kp F7  &kp F8  &kp F9  &bootloader   &none
-&none  &kp LA(D)    &kp LC(R)     &kp LC(D)   &kp LC(E)     &kp LC(T)     &kp F11  &kp F4  &kp F5  &kp F6  &bt BT_SEL 0  &none
-&none  &kp LC(Q)    &kp LC(J)     &kp LC(U)   &kp LC(U)     &kp LC(F4)    &kp F10  &kp F1  &kp F2  &kp F3  &bt BT_SEL 1  &none
-                                  &trans      &trans        &trans        &trans   &trans  &trans
+&none  &bootloader  &none      &kp LA(UP)    &kp LA(DOWN)  &slogan            &kp F12  &kp F7  &kp F8  &kp F9  &bootloader   &none
+&none  &kp LA(TAB)  &kp LA(D)  &kp LC(D)     &kp LC(E)     &kp LC(LA(TAB))    &kp F11  &kp F4  &kp F5  &kp F6  &bt BT_SEL 0  &none
+&none  &kp LC(Q)    &kp LC(J)  &versionctrl  &kp LC(U)     &kp LC(F4)         &kp F10  &kp F1  &kp F2  &kp F3  &bt BT_SEL 1  &none
+                               &trans        &trans        &trans             &trans   &trans  &trans
             >;
         };
 
         mouse_layer {
-            display-name = "mouse";
+            display-name = "utility";
             bindings = <
-&none  &none  &none  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &none     &msc SCROLL_UP    &trans          &mmv MOVE_UP    &trans           &trans  &trans
-&none  &none  &none  &kp C_BRI_DEC         &kp C_VOLUME_DOWN  &none     &msc SCROLL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&none  &none  &none  &ext_power EP_OFF     &ext_power EP_ON   &none     &none             &none           &none           &none            &none   &none
-                     &trans                &trans             &trans    &trans            &trans          &trans
+&none  &none  &none  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &kp K_MUTE    &msc SCROLL_UP    &trans          &mmv MOVE_UP    &trans           &trans  &trans
+&none  &none  &none  &kp C_BRI_DEC         &kp C_VOLUME_DOWN  &none         &msc SCROLL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&none  &none  &none  &ext_power EP_OFF     &ext_power EP_ON   &none         &none             &none           &none           &none            &none   &none
+                     &trans                &trans             &trans        &trans            &trans          &trans
             >;
         };
     };
