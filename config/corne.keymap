@@ -190,7 +190,7 @@
 
         stickyctrl {
             bindings = <&sk LEFT_CONTROL>;
-            key-positions = <4 16>;
+            key-positions = <15 3>;
         };
 
         colonn {
@@ -234,7 +234,7 @@
 
         q {
             bindings = <&kp Q>;
-            key-positions = <16 37>;
+            key-positions = <16 4>;
         };
 
         plus {
