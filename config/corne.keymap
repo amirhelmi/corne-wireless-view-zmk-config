@@ -313,10 +313,10 @@
         nav_layer {
             display-name = "navigation";
             bindings = <
-&none  &kp CAPSLOCK  &trans     &trans  &kp LC(Z)       &kp LC(Y)    &trans    &trans     &kp UP    &trans     &trans   &none
-&none  &trans        &kp LCTRL  &trans  &kp LEFT_SHIFT  &kp LC(R)    &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &none    &none
-&none  &trans        &trans     &trans  &kp LC(A)       &trans       &trans    &kp PG_UP  &none     &kp PG_DN  &kp END  &none
-                                &trans  &sk LEFT_ALT    &trans       &trans    &trans     &trans
+&none  &kp CAPSLOCK  &trans     &trans  &kp LC(Z)         &kp LC(Y)    &trans    &trans     &kp UP    &trans     &trans   &none
+&none  &trans        &kp LCTRL  &trans  &kp LEFT_SHIFT    &kp LC(R)    &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &none    &none
+&none  &kp LEFT_ALT  &trans     &trans  &kp LC(A)         &trans       &trans    &kp PG_UP  &none     &kp PG_DN  &kp END  &none
+                                &trans  &mt LEFT_ALT TAB  &trans       &trans    &trans     &trans
             >;
         };
 
