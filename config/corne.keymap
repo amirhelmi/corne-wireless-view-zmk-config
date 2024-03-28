@@ -239,7 +239,7 @@
 
         q {
             bindings = <&kp Q>;
-            key-positions = <3 15>;
+            key-positions = <14 16>;
         };
 
         plus {
