@@ -259,7 +259,7 @@
         statement: statement {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RET &kp LEFT_BRACE &kp RET &kp RBRC &kp UP_ARROW &kp ENTER &kp TAB>;
+            bindings = <&kp RET &kp LEFT_BRACE &kp RET &kp RBRC &kp UP_ARROW &kp ENTER>;
             label = "STATEMENT";
         };
 
