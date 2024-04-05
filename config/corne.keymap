@@ -116,9 +116,9 @@
 
         dot {
             bindings = <&kp DOT>;
-            key-positions = <19 20>;
+            key-positions = <20 21>;
             timeout-ms = <40>;
-            require-prior-idle-ms = <190>;
+            require-prior-idle-ms = <195>;
         };
 
         escape {
@@ -134,7 +134,7 @@
         ctrlback {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <19 21>;
-            require-prior-idle-ms = <190>;
+            require-prior-idle-ms = <195>;
             timeout-ms = <40>;
         };
 
@@ -212,9 +212,9 @@
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <20 21>;
+            key-positions = <20 19>;
             timeout-ms = <40>;
-            require-prior-idle-ms = <190>;
+            require-prior-idle-ms = <195>;
         };
 
         statementcombo {
@@ -309,8 +309,8 @@
             display-name = "navigation";
             bindings = <
 &none  &kp CAPSLOCK  &trans     &trans  &kp LC(Z)         &kp LC(Y)    &trans    &trans     &kp UP    &trans     &trans   &none
-&none  &trans        &kp LCTRL  &trans  &kp LEFT_SHIFT    &kp LC(R)    &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &none    &none
-&none  &kp LEFT_ALT  &trans     &trans  &kp LC(A)         &trans       &trans    &kp PG_UP  &none     &kp PG_DN  &kp END  &none
+&none  &kp LEFT_ALT  &kp LCTRL  &trans  &kp LEFT_SHIFT    &kp LC(R)    &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &none    &none
+&none  &none         &trans     &trans  &kp LC(A)         &trans       &trans    &kp PG_UP  &none     &kp PG_DN  &kp END  &none
                                 &trans  &mt LEFT_ALT TAB  &trans       &trans    &trans     &trans
             >;
         };
@@ -318,10 +318,10 @@
         num_layer {
             display-name = "number";
             bindings = <
-&none  &none  &none  &none   &none                 &none     &kp GRAVE   &kp N7  &kp N8  &kp N9  &mt FSLH MINUS  &none
-&none  &none  &none  &none   &none                 &none     &kp PERIOD  &kp N4  &kp N5  &kp N6  &none           &none
-&none  &none  &none  &none   &none                 &none     &kp BSLH    &kp N1  &kp N2  &kp N3  &kp N0          &none
-                     &trans  &mt LEFT_SHIFT SPACE  &trans    &trans      &trans  &trans
+&none  &none         &none      &none   &none                 &none     &kp GRAVE   &kp N7  &kp N8  &kp N9  &mt FSLH MINUS  &none
+&none  &kp LEFT_ALT  &kp LCTRL  &none   &none                 &none     &kp PERIOD  &kp N4  &kp N5  &kp N6  &none           &none
+&none  &none         &none      &none   &none                 &none     &kp BSLH    &kp N1  &kp N2  &kp N3  &kp N0          &none
+                                &trans  &mt LEFT_SHIFT SPACE  &trans    &trans      &trans  &trans
             >;
         };
 
