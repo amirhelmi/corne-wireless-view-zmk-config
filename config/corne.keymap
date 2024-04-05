@@ -116,14 +116,12 @@
 
         dot {
             bindings = <&kp DOT>;
-            key-positions = <20 21>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <195>;
+            key-positions = <32 33>;
         };
 
         escape {
             bindings = <&kp ESCAPE>;
-            key-positions = <37 25>;
+            key-positions = <37 16>;
         };
 
         lparenth {
@@ -133,9 +131,7 @@
 
         ctrlback {
             bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <19 21>;
-            require-prior-idle-ms = <195>;
-            timeout-ms = <40>;
+            key-positions = <7 19>;
         };
 
         cutcopy {
@@ -185,7 +181,7 @@
 
         minus {
             bindings = <&kp MINUS>;
-            key-positions = <32 33>;
+            key-positions = <32 31>;
         };
 
         stickyctrl {
@@ -206,15 +202,6 @@
         value {
             bindings = <&value>;
             key-positions = <9 21>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <190>;
-        };
-
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <20 19>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <195>;
         };
 
         statementcombo {
