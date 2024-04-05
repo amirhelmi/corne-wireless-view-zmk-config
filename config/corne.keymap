@@ -116,7 +116,7 @@
 
         dot {
             bindings = <&kp DOT>;
-            key-positions = <20 40>;
+            key-positions = <33 20>;
         };
 
         escape {
@@ -130,8 +130,8 @@
         };
 
         ctrlback {
-            bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <7 19>;
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 20>;
         };
 
         cutcopy {
@@ -196,7 +196,7 @@
 
         equal {
             bindings = <&kp EQUAL>;
-            key-positions = <40 18>;
+            key-positions = <40 20>;
         };
 
         value {
