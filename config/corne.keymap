@@ -116,7 +116,7 @@
 
         dot {
             bindings = <&kp DOT>;
-            key-positions = <32 33>;
+            key-positions = <20 40>;
         };
 
         escape {
@@ -196,7 +196,7 @@
 
         equal {
             bindings = <&kp EQUAL>;
-            key-positions = <20 40>;
+            key-positions = <40 18>;
         };
 
         value {
