@@ -116,7 +116,7 @@
 
         dot {
             bindings = <&kp DOT>;
-            key-positions = <20 40>;
+            key-positions = <40 19>;
         };
 
         escape {
@@ -129,9 +129,9 @@
             key-positions = <37 14>;
         };
 
-        ctrlback {
-            bindings = <&mt LC(BACKSPACE) BACKSPACE>;
-            key-positions = <40 19>;
+        back {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <40 20>;
         };
 
         cutcopy {
@@ -230,8 +230,8 @@
         };
 
         lbackspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <26 27>;
+            bindings = <&kp LC(BACKSPACE)>;
+            key-positions = <19 21 20>;
         };
     };
 
