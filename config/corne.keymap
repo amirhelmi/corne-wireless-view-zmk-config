@@ -160,7 +160,7 @@
 
         semicolon {
             bindings = <&kp SEMICOLON>;
-            key-positions = <40 34>;
+            key-positions = <40 19>;
         };
 
         rightclick {
