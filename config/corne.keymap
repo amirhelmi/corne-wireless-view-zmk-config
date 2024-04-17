@@ -292,7 +292,7 @@
 &none  &mt LG(LS(S)) Q  &kp L           &kp Y             &kp P        &mt LA(HOME) B     &kp Z               &kp F                       &kp O           &kp U      &mt BACKSLASH SLASH  &none
 &none  &mt LEFT_ALT W   &lt MOUSE R     &lt NAV S         &lt NUM T    &mt LESS_THAN G    &mt GREATER_THAN M  &kp N                       &kp E           &kp I      &mt GRAVE APOS       &none
 &none  &kp C            &mt LC(FSLH) J  &mt LGUI V        &kp D        &kp K              &kp X               &kp H                       &kp DOT         &kp COMMA  &kp A                &none
-                                        &gui_tap 0 ENTER  &lt 4 SPACE  &kp TAB            &lt 4 TAB           &repeat_shift LEFT_SHIFT 0  &mt LALT ENTER
+                                        &gui_tap 0 ENTER  &lt 4 SPACE  &lt 4 TAB          &lt 4 TAB           &repeat_shift LEFT_SHIFT 0  &mt LALT ENTER
             >;
         };
 
