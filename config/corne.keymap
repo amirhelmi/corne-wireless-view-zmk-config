@@ -242,6 +242,11 @@
             bindings = <&kp INSERT>;
             key-positions = <25 37>;
         };
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <37 15>;
+        };
     };
 
     macros {
