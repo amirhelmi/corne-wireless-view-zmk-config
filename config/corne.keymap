@@ -150,7 +150,7 @@
 
         save {
             bindings = <&kp LC(S)>;
-            key-positions = <37 15>;
+            key-positions = <37 3>;
         };
 
         click {
