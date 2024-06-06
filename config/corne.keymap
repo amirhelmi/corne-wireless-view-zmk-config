@@ -234,7 +234,7 @@
         };
 
         focus {
-            bindings = <&kp LC(BACKSPACE)>;
+            bindings = <&kp LC(E)>;
             key-positions = <15 28>;
         };
 
@@ -256,6 +256,11 @@
         undo {
             bindings = <&kp LC(Z)>;
             key-positions = <3 4>;
+        };
+
+        typedetail {
+            bindings = <&kp LA(NUMBER_1)>;
+            key-positions = <15 26>;
         };
     };
 
