@@ -145,12 +145,12 @@
 
         dele {
             bindings = <&kp DEL>;
-            key-positions = <28 15>;
+            key-positions = <28 27>;
         };
 
-        save {
-            bindings = <&kp LC(S)>;
-            key-positions = <27 28>;
+        menu {
+            bindings = <&kp K_APP>;
+            key-positions = <26 27>;
         };
 
         click {
@@ -233,9 +233,9 @@
             key-positions = <19 21 20>;
         };
 
-        rightbackspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <26 15>;
+        focus {
+            bindings = <&kp LC(BACKSPACE)>;
+            key-positions = <15 28>;
         };
 
         insert {
@@ -319,7 +319,7 @@
         nav_layer {
             display-name = "navigation";
             bindings = <
-&none  &kp CAPSLOCK  &trans     &trans  &kp LC(Z)         &kp LC(Y)    &trans    &trans     &kp UP    &trans     &trans   &none
+&none  &trans        &trans     &trans  &kp LC(Z)         &kp LC(Y)    &trans    &trans     &kp UP    &trans     &trans   &none
 &none  &kp LEFT_ALT  &kp LCTRL  &trans  &kp LEFT_SHIFT    &kp LC(R)    &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &none    &none
 &none  &none         &trans     &trans  &kp LC(A)         &trans       &trans    &kp PG_UP  &none     &kp PG_DN  &kp END  &none
                                 &trans  &mt LEFT_ALT TAB  &trans       &trans    &trans     &trans
@@ -339,30 +339,30 @@
         numgui_layer {
             display-name = "appswitcher";
             bindings = <
-&none  &bootloader  &none       &kp LG(N8)  &kp LG(N9)        &none        &none  &none  &none  &none  &none  &none
-&none  &kp LG(N7)   &kp LG(N4)  &kp LG(N5)  &kp LG(NUMBER_6)  &kp LG(X)    &none  &none  &none  &none  &none  &none
-&none  &kp LG(N0)   &kp LG(N1)  &kp LG(N2)  &kp LG(N3)        &none        &none  &none  &none  &none  &none  &none
-                                &trans      &trans            &trans       &none  &none  &none
+&none  &none       &slogan     &kp LG(N8)  &kp LG(N9)        &none        &none  &none  &none  &none  &none  &none
+&none  &kp LG(N7)  &kp LG(N4)  &kp LG(N5)  &kp LG(NUMBER_6)  &kp LG(X)    &none  &none  &none  &none  &none  &none
+&none  &kp LG(N0)  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)        &none        &none  &none  &none  &none  &none  &none
+                               &trans      &trans            &trans       &none  &none  &none
             >;
         };
 
         fun_layer {
             display-name = "function";
             bindings = <
-&none  &none             &slogan    &kp LA(UP)  &kp LA(DOWN)  &kp LA(HOME)    &kp F12  &kp F7  &kp F8  &kp F9  &bootloader   &none
-&none  &kp LA(N5)        &kp LC(D)  &kp LC(R)   &kp LC(E)     &kp LA(LEFT)    &kp F11  &kp F4  &kp F5  &kp F6  &bt BT_SEL 0  &none
-&none  &kp LA(NUMBER_1)  &kp LC(J)  &kp F3      &kp K_APP     &kp LC(F4)      &kp F10  &kp F1  &kp F2  &kp F3  &bt BT_SEL 1  &none
-                                    &slogan     &trans        &trans          &trans   &trans  &trans
+&none  &trans            &none      &kp LA(UP)   &kp LA(DOWN)      &kp LA(HOME)    &kp F12  &kp F7  &kp F8       &kp F9  &trans        &none
+&none  &kp LA(N5)        &kp LC(D)  &kp LC(R)    &kp LC(E)         &kp LA(LEFT)    &kp F11  &kp F4  &kp F5       &kp F6  &bt BT_SEL 0  &none
+&none  &kp LA(NUMBER_1)  &kp LC(J)  &kp F3       &kp LA(NUMBER_2)  &kp LC(F4)      &kp F10  &kp F1  &kp F2       &kp F3  &bt BT_SEL 1  &none
+                                    &bootloader  &trans            &trans          &trans   &trans  &bootloader
             >;
         };
 
         mouse_layer {
             display-name = "utility";
             bindings = <
-&none  &none  &none  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &kp C_MUTE    &msc SCROLL_UP    &trans          &mmv MOVE_UP    &trans           &trans  &trans
-&none  &none  &none  &kp C_BRI_DEC         &kp C_VOLUME_DOWN  &none         &msc SCROLL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&none  &none  &none  &none                 &ext_power EP_ON   &none         &none             &none           &none           &none            &none   &none
-                     &trans                &trans             &trans        &trans            &trans          &trans
+&none  &none  &none  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &kp C_MUTE    &none   &trans          &mmv MOVE_UP    &trans           &trans  &trans
+&none  &none  &none  &kp C_BRI_DEC         &kp C_VOLUME_DOWN  &kp CAPS      &none   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&none  &none  &none  &none                 &ext_power EP_ON   &none         &none   &none           &none           &none            &none   &none
+                     &trans                &trans             &trans        &trans  &trans          &trans
             >;
         };
     };
