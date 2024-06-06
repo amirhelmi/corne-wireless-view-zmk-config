@@ -339,10 +339,10 @@
         fun_layer {
             display-name = "function";
             bindings = <
-&none  &bootloader  &kp LA(NUMBER_1)  &kp LA(UP)  &kp LA(DOWN)  &slogan         &kp F12  &kp F7  &kp F8  &kp F9  &bootloader   &none
-&none  &kp LA(N5)   &kp LC(R)         &kp LC(D)   &kp LC(E)     &kp LA(LEFT)    &kp F11  &kp F4  &kp F5  &kp F6  &bt BT_SEL 0  &none
-&none  &kp K_APP    &kp LC(J)         &kp F3      &kp LC(U)     &kp LC(F4)      &kp F10  &kp F1  &kp F2  &kp F3  &bt BT_SEL 1  &none
-                                      &trans      &trans        &trans          &trans   &trans  &trans
+&none  &bootloader       &none      &kp LA(UP)  &kp LA(DOWN)  &slogan         &kp F12  &kp F7  &kp F8  &kp F9  &bootloader   &none
+&none  &kp LA(N5)        &kp LC(R)  &kp LC(D)   &kp LC(E)     &kp LA(LEFT)    &kp F11  &kp F4  &kp F5  &kp F6  &bt BT_SEL 0  &none
+&none  &kp LA(NUMBER_1)  &kp LC(J)  &kp F3      &kp K_APP     &kp LC(F4)      &kp F10  &kp F1  &kp F2  &kp F3  &bt BT_SEL 1  &none
+                                    &trans      &trans        &trans          &trans   &trans  &trans
             >;
         };
 
