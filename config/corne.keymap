@@ -299,10 +299,10 @@
         default_layer {
             display-name = "alphabet";
             bindings = <
-&none  &mt LG(LS(S)) Q  &kp L           &kp Y             &kp P        &mt LA(HOME) B    &kp Z      &kp F                       &kp O           &kp U       &mt BACKSLASH SLASH  &none
-&none  &mt LEFT_ALT W   &lt MOUSE R     &lt NAV S         &lt NUM T    &kp G             &kp M      &kp N                       &kp E           &kp I       &mt GRAVE APOS       &none
-&none  &kp C            &mt LC(FSLH) J  &mt LGUI V        &kp D        &kp K             &kp X      &kp H                       &kp COMMA       &kp PERIOD  &kp A                &none
-                                        &gui_tap 0 LC(S)  &lt 4 SPACE  &lt 4 TAB         &lt 4 TAB  &repeat_shift LEFT_SHIFT 0  &mt LALT ENTER
+&none  &mt LG(LS(S)) Q  &kp L           &kp Y        &kp P        &mt LA(HOME) B    &kp Z      &kp F                       &kp O           &kp U       &mt BACKSLASH SLASH  &none
+&none  &mt LEFT_ALT W   &lt MOUSE R     &lt NAV S    &lt NUM T    &kp G             &kp M      &kp N                       &kp E           &kp I       &mt GRAVE APOS       &none
+&none  &kp C            &mt LC(FSLH) J  &mt LGUI V   &kp D        &kp K             &kp X      &kp H                       &kp COMMA       &kp PERIOD  &kp A                &none
+                                        &lt 3 LC(S)  &lt 4 SPACE  &lt 4 TAB         &lt 4 TAB  &repeat_shift LEFT_SHIFT 0  &mt LALT ENTER
             >;
         };
 
@@ -329,20 +329,20 @@
         numgui_layer {
             display-name = "appswitcher";
             bindings = <
-&none  &trans  &kp N7  &kp N8  &kp N9         &kp N0    &none  &none  &none  &none  &none  &none
-&none  &none   &kp N4  &kp N5  &mt LSHIFT N6  &trans    &none  &none  &none  &none  &none  &none
-&none  &kp N0  &kp N1  &kp N2  &kp N3         &trans    &none  &none  &none  &none  &none  &none
-                       &trans  &trans         &trans    &none  &none  &none
+&none  &trans      &kp LG(N7)  &kp LG(N8)  &kp LG(N9)        &none     &none  &none  &none  &none  &none  &none
+&none  &none       &kp LG(N4)  &kp LG(N5)  &kp LG(NUMBER_6)  &trans    &none  &none  &none  &none  &none  &none
+&none  &kp LG(N0)  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)        &trans    &none  &none  &none  &none  &none  &none
+                               &trans      &trans            &trans    &none  &none  &none
             >;
         };
 
         fun_layer {
             display-name = "function";
             bindings = <
-&none  &bootloader       &none      &kp LA(UP)  &kp LA(DOWN)  &slogan         &kp F12  &kp F7  &kp F8  &kp F9  &bootloader   &none
-&none  &kp LA(N5)        &kp LC(R)  &kp LC(D)   &kp LC(E)     &kp LA(LEFT)    &kp F11  &kp F4  &kp F5  &kp F6  &bt BT_SEL 0  &none
+&none  &bootloader       &none      &kp LA(UP)  &kp LA(DOWN)  &kp LA(HOME)    &kp F12  &kp F7  &kp F8  &kp F9  &bootloader   &none
+&none  &kp LA(N5)        &kp LC(D)  &kp LC(D)   &kp LC(E)     &kp LA(LEFT)    &kp F11  &kp F4  &kp F5  &kp F6  &bt BT_SEL 0  &none
 &none  &kp LA(NUMBER_1)  &kp LC(J)  &kp F3      &kp K_APP     &kp LC(F4)      &kp F10  &kp F1  &kp F2  &kp F3  &bt BT_SEL 1  &none
-                                    &trans      &trans        &trans          &trans   &trans  &trans
+                                    &slogan     &trans        &trans          &trans   &trans  &trans
             >;
         };
 
