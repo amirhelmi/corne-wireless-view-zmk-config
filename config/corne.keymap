@@ -120,7 +120,7 @@
 
         enter {
             bindings = <&kp ENTER>;
-            key-positions = <37 16>;
+            key-positions = <16 3>;
         };
 
         lparenth {
@@ -150,7 +150,7 @@
 
         save {
             bindings = <&kp LC(S)>;
-            key-positions = <37 3>;
+            key-positions = <3 25>;
         };
 
         click {
@@ -245,7 +245,17 @@
 
         escape {
             bindings = <&kp ESCAPE>;
-            key-positions = <37 15>;
+            key-positions = <3 14>;
+        };
+
+        redo {
+            bindings = <&kp LC(Y)>;
+            key-positions = <2 3>;
+        };
+
+        undo {
+            bindings = <&kp LC(Z)>;
+            key-positions = <3 4>;
         };
     };
 
@@ -301,7 +311,7 @@
             bindings = <
 &none  &mt LG(LS(S)) Q  &kp L           &kp Y        &kp P        &mt LA(HOME) B    &kp Z      &kp F                       &kp O           &kp U       &mt BACKSLASH SLASH  &none
 &none  &mt LEFT_ALT W   &lt MOUSE R     &lt NAV S    &lt NUM T    &kp G             &kp M      &kp N                       &kp E           &kp I       &mt GRAVE APOS       &none
-&none  &kp C            &mt LC(FSLH) J  &mt LGUI V   &kp D        &kp K             &kp X      &kp H                       &kp COMMA       &kp PERIOD  &kp A                &none
+&none  &mt LEFT_ALT C   &mt LC(FSLH) J  &mt LGUI V   &kp D        &kp K             &kp X      &kp H                       &kp COMMA       &kp PERIOD  &kp A                &none
                                         &lt 3 LC(S)  &lt 4 SPACE  &lt 4 TAB         &lt 4 TAB  &repeat_shift LEFT_SHIFT 0  &mt LALT ENTER
             >;
         };
