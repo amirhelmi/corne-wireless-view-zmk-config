@@ -145,7 +145,7 @@
 
         dele {
             bindings = <&kp DEL>;
-            key-positions = <28 27>;
+            key-positions = <28 15>;
         };
 
         save {
@@ -235,7 +235,7 @@
 
         rightbackspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <26 27>;
+            key-positions = <26 15>;
         };
 
         insert {
@@ -340,7 +340,7 @@
             display-name = "function";
             bindings = <
 &none  &bootloader       &none      &kp LA(UP)  &kp LA(DOWN)  &kp LA(HOME)    &kp F12  &kp F7  &kp F8  &kp F9  &bootloader   &none
-&none  &kp LA(N5)        &kp LC(D)  &kp LC(D)   &kp LC(E)     &kp LA(LEFT)    &kp F11  &kp F4  &kp F5  &kp F6  &bt BT_SEL 0  &none
+&none  &kp LA(N5)        &kp LC(R)  &kp LC(D)   &kp LC(E)     &kp LA(LEFT)    &kp F11  &kp F4  &kp F5  &kp F6  &bt BT_SEL 0  &none
 &none  &kp LA(NUMBER_1)  &kp LC(J)  &kp F3      &kp K_APP     &kp LC(F4)      &kp F10  &kp F1  &kp F2  &kp F3  &bt BT_SEL 1  &none
                                     &slogan     &trans        &trans          &trans   &trans  &trans
             >;
