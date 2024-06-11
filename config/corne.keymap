@@ -382,6 +382,7 @@
         };
 
         symbol_layer {
+            display-name = "symbol";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LS(N7)        &kp LS(N8)        &kp LS(N9)        &trans      &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LS(NUMBER_4)  &kp LS(N5)        &kp LS(NUMBER_6)  &trans      &trans
@@ -391,6 +392,7 @@
         };
 
         appswitch_layer2 {
+            display-name = "appswitch2";
             bindings = <
 &trans  &trans  &kp N7  &kp N8  &kp N9  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp N4  &kp N5  &kp N6  &kp N0    &trans  &trans  &trans  &trans  &trans  &trans
