@@ -310,7 +310,7 @@
         slogan: slogan {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(S) &kp Y &kp N &kp C &kp H &kp R &kp O &kp N &kp I &kp Z &kp E &kp U &kp P &kp G &kp R &kp A &kp D &kp E &kp A &kp B &kp I &kp L &kp I &kp T &kp Y &kp DLLR &kp PRCNT &kp CARET &kp PLUS>;
+            bindings = <&kp LS(S) &kp R &kp U &kp T &kp H &kp L &kp E &kp S &kp D &kp O &kp P &kp A &kp M &kp I &kp N &kp E &kp S &kp T &kp A &kp T &kp E &kp DLLR &kp PRCNT &kp CARET &kp PLUS>;
             label = "SLOGAN";
         };
 
