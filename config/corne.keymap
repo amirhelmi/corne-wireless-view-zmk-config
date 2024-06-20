@@ -329,8 +329,8 @@
             display-name = "alphabet";
             bindings = <
 &none  &mt LG(LS(S)) Q  &lt 5 L         &lt 3 Y     &kp P        &mt LA(HOME) B    &kp Z      &kp F                       &kp O           &kp U       &mt BACKSLASH SLASH  &none
-&none  &lt 3 W          &lt 4 R         &lt NAV S   &lt NUM T    &kp G             &kp M      &kp N                       &kp E           &kp I       &mt GRAVE APOS       &none
-&none  &mt LEFT_ALT C   &mt LC(FSLH) J  &mt LGUI V  &lt 6 D      &kp K             &kp X      &kp H                       &kp COMMA       &kp PERIOD  &kp A                &none
+&none  &mt LEFT_ALT W   &lt 4 R         &lt NAV S   &lt NUM T    &kp G             &kp M      &kp N                       &kp E           &kp I       &mt GRAVE APOS       &none
+&none  &lt 3 C          &mt LC(FSLH) J  &mt LGUI V  &lt 6 D      &kp K             &kp X      &kp H                       &kp COMMA       &kp PERIOD  &kp A                &none
                                         &sl 7       &lt 3 SPACE  &lt 4 TAB         &lt 4 TAB  &repeat_shift LEFT_SHIFT 0  &mt LALT ENTER
             >;
         };
@@ -358,10 +358,10 @@
         appswitch_layer {
             display-name = "appswitcher";
             bindings = <
-&none  &slogan            &kp LG(N7)  &kp LG(N8)  &kp LG(N9)         &none        &none  &none  &none  &none  &none  &none
-&none  &trans             &kp LG(N4)  &kp LG(N5)  &kp LG(NUMBER_6)   &kp LG(X)    &none  &none  &none  &none  &none  &none
-&none  &gui_tap 0 LG(N0)  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)         &none        &none  &none  &none  &none  &none  &none
-                                      &trans      &gui_tap 0 LG(N0)  &trans       &none  &none  &none
+&none  &slogan  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)         &none        &none  &none  &none  &none  &none  &none
+&none  &trans   &kp LG(N4)  &kp LG(N5)  &kp LG(NUMBER_6)   &kp LG(X)    &none  &none  &none  &none  &none  &none
+&none  &none    &kp LG(N1)  &kp LG(N2)  &kp LG(N3)         &none        &none  &none  &none  &none  &none  &none
+                            &trans      &gui_tap 0 LG(N0)  &trans       &none  &none  &none
             >;
         };
 
