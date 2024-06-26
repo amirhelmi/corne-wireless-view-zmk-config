@@ -320,6 +320,13 @@
             bindings = <&kp LA(A) &kp LC(S)>;
             label = "SAVE";
         };
+
+        git: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp I &kp X &kp K &kp N &kp U &kp Z &kp B &kp H &kp W &kp N4 &kp E &kp W &kp H &kp W &kp D &kp D &kp J &kp Z &kp Y &kp M &kp R &kp A &kp S &kp V &kp N3 &kp N5 &kp X &kp Y &kp N7 &kp W &kp C &kp C &kp N7 &kp O &kp N6 &kp N5 &kp W &kp O &kp U &kp Z &kp E &kp D &kp N7 &kp N4 &kp N2 &kp N &kp X &kp X &kp N &kp I &kp D &kp Q>;
+            label = "NEW_MACRO";
+        };
     };
 
     keymap {
@@ -360,7 +367,7 @@
             bindings = <
 &none  &slogan  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)         &none        &none  &none  &none  &none  &none  &none
 &none  &trans   &kp LG(N4)  &kp LG(N5)  &kp LG(NUMBER_6)   &kp LG(X)    &none  &none  &none  &none  &none  &none
-&none  &none    &kp LG(N1)  &kp LG(N2)  &kp LG(N3)         &none        &none  &none  &none  &none  &none  &none
+&none  &none    &kp LG(N1)  &kp LG(N2)  &kp LG(N3)         &git         &none  &none  &none  &none  &none  &none
                             &trans      &gui_tap 0 LG(N0)  &trans       &none  &none  &none
             >;
         };
