@@ -258,7 +258,7 @@
         };
 
         typedetail {
-            bindings = <&mt LA(N0) LA(NUMBER_1)>;
+            bindings = <&mt LA(NUMBER_1) LA(N0)>;
             key-positions = <14 3>;
         };
 
