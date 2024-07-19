@@ -260,6 +260,7 @@
         typedetail {
             bindings = <&mt LA(NUMBER_1) LA(N0)>;
             key-positions = <14 3>;
+            require-prior-idle-ms = <180>;
         };
 
         save {
@@ -280,21 +281,25 @@
         and {
             bindings = <&kp AMPERSAND>;
             key-positions = <8 19>;
+            require-prior-idle-ms = <180>;
         };
 
         star {
             bindings = <&kp ASTERISK>;
             key-positions = <8 21>;
+            require-prior-idle-ms = <180>;
         };
 
         hash {
             bindings = <&kp HASH>;
             key-positions = <20 33>;
+            require-prior-idle-ms = <180>;
         };
 
         at {
             bindings = <&kp AT_SIGN>;
             key-positions = <20 31>;
+            require-prior-idle-ms = <180>;
         };
     };
 
