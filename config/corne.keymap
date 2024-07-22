@@ -189,12 +189,12 @@
 
         colonn {
             bindings = <&kp COLON>;
-            key-positions = <19 40>;
+            key-positions = <40 18>;
         };
 
         equal {
             bindings = <&kp EQUAL>;
-            key-positions = <20 40>;
+            key-positions = <40 19>;
         };
 
         value {
@@ -276,30 +276,6 @@
         f3 {
             bindings = <&kp F3>;
             key-positions = <15 37>;
-        };
-
-        and {
-            bindings = <&kp AMPERSAND>;
-            key-positions = <8 19>;
-            require-prior-idle-ms = <180>;
-        };
-
-        star {
-            bindings = <&kp ASTERISK>;
-            key-positions = <8 21>;
-            require-prior-idle-ms = <180>;
-        };
-
-        hash {
-            bindings = <&kp HASH>;
-            key-positions = <20 33>;
-            require-prior-idle-ms = <180>;
-        };
-
-        at {
-            bindings = <&kp AT_SIGN>;
-            key-positions = <20 31>;
-            require-prior-idle-ms = <180>;
         };
     };
 
@@ -399,7 +375,7 @@
             bindings = <
 &none  &trans            &kp LG(N7)  &kp LG(N8)  &kp LG(N9)         &kp LG(NUMBER_2)    &none  &none  &none  &none  &none  &none
 &none  &kp LG(NUMBER_1)  &kp LG(N4)  &kp LG(N5)  &kp LG(NUMBER_6)   &kp LG(N0)          &none  &none  &none  &none  &none  &none
-&none  &none             &kp LG(N1)  &kp LG(N2)  &kp LG(N3)         &trans              &none  &none  &none  &none  &none  &none
+&none  &kp LG(D)         &kp LG(N1)  &kp LG(N2)  &kp LG(N3)         &trans              &none  &none  &none  &none  &none  &none
                                      &trans      &gui_tap 0 LG(N8)  &trans              &none  &none  &none
             >;
         };
