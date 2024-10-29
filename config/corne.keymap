@@ -329,11 +329,11 @@
             label = "REPAND";
         };
 
-        repbor: new_macro {
+        repbor: repbor {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp H &kp N4 &kp J &kp X &kp F &kp C &kp F &kp N4 &kp E &kp S &kp R &kp I &kp C &kp S &kp A &kp B &kp Q &kp N &kp U &kp J &kp L &kp D &kp P &kp O &kp S &kp O &kp N6 &kp N4 &kp G &kp N6 &kp Z &kp G &kp N3 &kp G &kp N7 &kp S &kp D &kp E &kp N3 &kp W &kp X &kp R &kp F &kp W &kp N6 &kp N2 &kp D &kp J &kp P &kp V &kp O &kp A>;
-            label = "NEW_MACRO";
+            bindings = <&kp N &kp J &kp V &kp N7 &kp L &kp W &kp I &kp W &kp T &kp D &kp N6 &kp F &kp G &kp V &kp N7 &kp K &kp N &kp Q &kp B &kp P &kp V &kp D &kp B &kp X &kp T &kp Y &kp N &kp F &kp E &kp N5 &kp I &kp Z &kp L &kp I &kp X &kp P &kp N7 &kp M &kp F &kp U &kp G &kp G &kp D &kp T &kp X &kp U &kp L &kp C &kp N5 &kp I &kp N &kp A>;
+            label = "REPBOR";
         };
     };
 
