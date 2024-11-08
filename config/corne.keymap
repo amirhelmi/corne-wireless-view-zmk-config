@@ -264,7 +264,7 @@
         };
 
         save {
-            bindings = <&kp LC(S)>;
+            bindings = <&mt LC(S) LA(A)>;
             key-positions = <15 14 16>;
         };
 
