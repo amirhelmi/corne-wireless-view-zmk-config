@@ -263,8 +263,8 @@
             require-prior-idle-ms = <180>;
         };
 
-        apply {
-            bindings = <&kp LA(A)>;
+        save {
+            bindings = <&kp LC(S)>;
             key-positions = <15 14 16>;
         };
 
