@@ -232,11 +232,6 @@
             key-positions = <19 21 20>;
         };
 
-        goto {
-            bindings = <&sk LC(D)>;
-            key-positions = <3 16>;
-        };
-
         insert {
             bindings = <&kp INSERT>;
             key-positions = <25 37>;
@@ -258,14 +253,14 @@
         };
 
         typedetail {
-            bindings = <&kp LC(R)>;
+            bindings = <&mt LC(R) LC(D)>;
             key-positions = <14 3>;
             require-prior-idle-ms = <180>;
         };
 
         focus {
             bindings = <&kp LC(E)>;
-            key-positions = <15 14 16>;
+            key-positions = <16 3>;
         };
 
         find {
@@ -343,9 +338,9 @@
         default_layer {
             display-name = "alphabet";
             bindings = <
-&none  &mt LG(LS(S)) Q  &mt LA(N0) L    &mt LA(UP_ARROW) Y  &mt LA(DOWN) P    &mt LA(HOME) B    &kp Z        &kp F                       &kp O           &kp U       &mt BACKSLASH SLASH  &none
+&none  &mt LG(LS(S)) Q  &kp L           &mt LA(UP_ARROW) Y  &mt LA(DOWN) P    &mt LA(HOME) B    &kp Z        &kp F                       &kp O           &kp U       &mt BACKSLASH SLASH  &none
 &none  &lt 5 W          &mt LCTRL R     &lt 1 S             &mt LEFT_SHIFT T  &mt LA(LEFT) G    &kp M        &mt LEFT_SHIFT N            &kp E           &kp I       &mt GRAVE APOS       &none
-&none  &mt LEFT_ALT C   &mt LC(FSLH) J  &lt 2 V             &mt LA(A) D       &kp K             &mt LG(X) X  &kp H                       &kp COMMA       &kp PERIOD  &kp A                &none
+&none  &mt LEFT_ALT C   &mt LC(FSLH) J  &lt 2 V             &kp D             &kp K             &mt LG(X) X  &kp H                       &kp COMMA       &kp PERIOD  &kp A                &none
                                         &mt LEFT_GUI ENTER  &gui_tap 0 SPACE  &lt 4 TAB         &lt 4 TAB    &repeat_shift LEFT_SHIFT 0  &mt LALT ENTER
             >;
         };
@@ -385,7 +380,7 @@
             bindings = <
 &none  &slogan       &repbor  &kp UP_ARROW  &kp DOWN  &trans        &kp F12  &kp F7  &kp F8       &kp F9  &trans        &none
 &none  &repand       &kp N0   &kp NUMBER_1  &kp N2    &trans        &kp F11  &kp F4  &kp F5       &kp F6  &bt BT_SEL 0  &none
-&none  &sk LEFT_ALT  &trans   &trans        &trans    &kp LC(F4)    &kp F10  &kp F1  &kp F2       &kp F3  &bt BT_SEL 1  &none
+&none  &sk LEFT_ALT  &trans   &trans        &kp A     &kp LC(F4)    &kp F10  &kp F1  &kp F2       &kp F3  &bt BT_SEL 1  &none
                               &bootloader   &trans    &trans        &trans   &trans  &bootloader
             >;
         };
