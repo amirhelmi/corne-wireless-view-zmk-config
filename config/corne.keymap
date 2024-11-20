@@ -383,10 +383,10 @@
         fun_layer {
             display-name = "function";
             bindings = <
-&none  &slogan       &repbor    &kp N0       &kp NUMBER_1      &kp NUMBER_2    &kp F12  &kp F7  &kp F8       &kp F9  &trans        &none
-&none  &repand       &trans     &kp LC(D)    &kp LC(R)         &kp LA(LEFT)    &kp F11  &kp F4  &kp F5       &kp F6  &bt BT_SEL 0  &none
-&none  &sk LEFT_ALT  &kp LC(J)  &trans       &kp LA(NUMBER_2)  &kp LC(F4)      &kp F10  &kp F1  &kp F2       &kp F3  &bt BT_SEL 1  &none
-                                &bootloader  &trans            &trans          &trans   &trans  &bootloader
+&none  &slogan       &repbor  &kp UP_ARROW  &kp DOWN  &trans        &kp F12  &kp F7  &kp F8       &kp F9  &trans        &none
+&none  &repand       &kp N0   &kp NUMBER_1  &kp N2    &trans        &kp F11  &kp F4  &kp F5       &kp F6  &bt BT_SEL 0  &none
+&none  &sk LEFT_ALT  &trans   &trans        &trans    &kp LC(F4)    &kp F10  &kp F1  &kp F2       &kp F3  &bt BT_SEL 1  &none
+                              &bootloader   &trans    &trans        &trans   &trans  &bootloader
             >;
         };
 
