@@ -217,8 +217,8 @@
             key-positions = <37 40>;
         };
 
-        stickyshift {
-            bindings = <&sk LEFT_SHIFT>;
+        stickyalt {
+            bindings = <&sk LEFT_ALT>;
             key-positions = <16 4>;
         };
 
