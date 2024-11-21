@@ -334,8 +334,43 @@
         altone: altone {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp LA(NUMBER_1)>;
+            bindings = <&sk LEFT_ALT &kp NUMBER_1>;
             label = "ALTONE";
+        };
+
+        altzero: altzero {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_ALT &kp N0>;
+            label = "ALTZERO";
+        };
+
+        alta: alta {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_ALT &kp A>;
+            label = "ALTA";
+        };
+
+        alttwo: alttwo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_ALT &kp NUMBER_2>;
+            label = "ALTTWO";
+        };
+
+        altup: altup {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_ALT &kp UP_ARROW>;
+            label = "ALTUP";
+        };
+
+        altdown: altdown {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_ALT &kp DOWN>;
+            label = "ALTDOWN";
         };
     };
 
@@ -375,20 +410,20 @@
         appswitch_layer {
             display-name = "appswitcher";
             bindings = <
-&none  &trans            &kp LG(N7)  &kp LG(N8)  &kp LG(N9)         &kp LG(NUMBER_2)    &none  &none  &none  &none  &none  &none
-&none  &kp LG(NUMBER_1)  &kp LG(N4)  &kp LG(N5)  &kp LG(NUMBER_6)   &kp LG(N0)          &none  &none  &none  &none  &none  &none
-&none  &kp LG(D)         &kp LG(N1)  &kp LG(N2)  &kp LG(N3)         &trans              &none  &none  &none  &none  &none  &none
-                                     &trans      &gui_tap 0 LG(N8)  &trans              &none  &none  &none
+&none  &trans            &kp LG(N7)  &kp LG(N8)  &kp LG(N9)        &kp LG(NUMBER_2)    &none  &none  &none  &none  &none  &none
+&none  &kp LG(NUMBER_1)  &kp LG(N4)  &kp LG(N5)  &kp LG(NUMBER_6)  &kp LG(N0)          &none  &none  &none  &none  &none  &none
+&none  &kp LG(D)         &kp LG(N1)  &kp LG(N2)  &kp LG(N3)        &trans              &none  &none  &none  &none  &none  &none
+                                     &trans      &trans            &trans              &none  &none  &none
             >;
         };
 
         fun_layer {
             display-name = "function";
             bindings = <
-&none  &slogan       &repbor  &kp UP_ARROW  &kp DOWN  &trans        &kp F12  &kp F7  &kp F8       &kp F9  &trans        &none
-&none  &repand       &kp N0   &altone       &kp N2    &trans        &kp F11  &kp F4  &kp F5       &kp F6  &bt BT_SEL 0  &none
-&none  &sk LEFT_ALT  &trans   &trans        &kp A     &kp LC(F4)    &kp F10  &kp F1  &kp F2       &kp F3  &bt BT_SEL 1  &none
-                              &bootloader   &trans    &trans        &trans   &trans  &bootloader
+&none  &slogan       &repbor   &altup       &altdown  &trans        &kp F12  &kp F7  &kp F8       &kp F9  &trans        &none
+&none  &repand       &altzero  &altone      &alta     &trans        &kp F11  &kp F4  &kp F5       &kp F6  &bt BT_SEL 0  &none
+&none  &sk LEFT_ALT  &trans    &trans       &alttwo   &kp LC(F4)    &kp F10  &trans  &kp F1       &kp F2  &kp F3        &none
+                               &bootloader  &trans    &trans        &trans   &trans  &bootloader
             >;
         };
 
