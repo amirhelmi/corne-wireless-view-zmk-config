@@ -330,6 +330,13 @@
             bindings = <&kp N &kp J &kp V &kp N7 &kp L &kp W &kp I &kp W &kp T &kp D &kp N6 &kp F &kp G &kp V &kp N7 &kp K &kp N &kp Q &kp B &kp P &kp V &kp D &kp B &kp X &kp T &kp Y &kp N &kp F &kp E &kp N5 &kp I &kp Z &kp L &kp I &kp X &kp P &kp N7 &kp M &kp F &kp U &kp G &kp G &kp D &kp T &kp X &kp U &kp L &kp C &kp N5 &kp I &kp N &kp A>;
             label = "REPBOR";
         };
+
+        altone: altone {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp LA(NUMBER_1)>;
+            label = "ALTONE";
+        };
     };
 
     keymap {
@@ -379,7 +386,7 @@
             display-name = "function";
             bindings = <
 &none  &slogan       &repbor  &kp UP_ARROW  &kp DOWN  &trans        &kp F12  &kp F7  &kp F8       &kp F9  &trans        &none
-&none  &repand       &kp N0   &kp NUMBER_1  &kp N2    &trans        &kp F11  &kp F4  &kp F5       &kp F6  &bt BT_SEL 0  &none
+&none  &repand       &kp N0   &altone       &kp N2    &trans        &kp F11  &kp F4  &kp F5       &kp F6  &bt BT_SEL 0  &none
 &none  &sk LEFT_ALT  &trans   &trans        &kp A     &kp LC(F4)    &kp F10  &kp F1  &kp F2       &kp F3  &bt BT_SEL 1  &none
                               &bootloader   &trans    &trans        &trans   &trans  &bootloader
             >;
