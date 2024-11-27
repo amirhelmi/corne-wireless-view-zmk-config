@@ -272,6 +272,11 @@
             bindings = <&kp F3>;
             key-positions = <15 37>;
         };
+
+        tognum {
+            bindings = <&mo 6>;
+            key-positions = <38 39>;
+        };
     };
 
     macros {
