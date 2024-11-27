@@ -459,10 +459,10 @@
         numlayer2 {
             display-name = "number";
             bindings = <
-&trans  &trans  &kp N7  &kp N8        &kp N9        &trans            &kp F12  &trans        &trans  &trans        &trans  &trans
-&trans  &kp N9  &kp N5  &kp NUMBER_1  &kp NUMBER_3  &kp N7            &kp F11  &kp NUMBER_2  &kp N0  &kp NUMBER_4  &kp N8  &trans
-&trans  &kp N9  &kp N1  &kp N2        &kp N7        &trans            &kp F10  &kp NUMBER_6  &trans  &trans        &kp N8  &trans
-                        &trans        &trans        &kp LEFT_SHIFT    &trans   &trans        &trans
+&trans  &trans  &kp N7  &kp N8        &kp N9        &trans            &kp F12  &trans        &trans       &trans        &trans  &trans
+&trans  &kp N9  &kp N5  &kp NUMBER_1  &kp NUMBER_3  &kp N7            &kp F11  &kp NUMBER_2  &kp N0       &kp NUMBER_4  &kp N8  &trans
+&trans  &kp N9  &kp N1  &kp N2        &kp N7        &trans            &kp F10  &kp NUMBER_6  &trans       &trans        &kp N8  &trans
+                        &trans        &trans        &kp LEFT_SHIFT    &trans   &trans        &bootloader
             >;
         };
     };
