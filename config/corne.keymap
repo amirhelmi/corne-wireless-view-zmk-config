@@ -212,8 +212,8 @@
             key-positions = <38 37>;
         };
 
-        capsword {
-            bindings = <&caps_word>;
+        tognum {
+            bindings = <&tog 7>;
             key-positions = <37 40>;
         };
 
@@ -447,13 +447,13 @@
             >;
         };
 
-        appswitch_layer2 {
+        numlayer2 {
             display-name = "number";
             bindings = <
-&trans  &trans  &kp N7  &kp N8  &kp N9  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp N4  &kp N5  &kp N6  &kp N0    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp N1  &kp N2  &kp N3  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &kp N7  &kp N8        &kp N9        &trans    &trans        &trans        &trans  &trans        &trans  &trans
+&trans  &kp N9  &kp N5  &kp NUMBER_1  &kp NUMBER_3  &kp N7    &kp NUMBER_6  &kp NUMBER_2  &kp N0  &kp NUMBER_4  &trans  &trans
+&trans  &kp N9  &kp N1  &kp N2        &kp N3        &trans    &trans        &trans        &trans  &trans        &kp N8  &trans
+                        &trans        &kp N7        &trans    &trans        &kp NUMBER_6  &trans
             >;
         };
     };
