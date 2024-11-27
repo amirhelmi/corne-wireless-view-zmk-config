@@ -212,8 +212,8 @@
             key-positions = <38 37>;
         };
 
-        tognum {
-            bindings = <&mo 7>;
+        capword {
+            bindings = <&caps_word>;
             key-positions = <37 40>;
         };
 
@@ -395,9 +395,9 @@
             display-name = "alphabet";
             bindings = <
 &none  &mt LG(LS(S)) Q  &kp L           &mt LG(D) Y         &mt F5 P          &kp B        &kp Z        &kp F                       &kp O           &kp U       &mt BACKSLASH SLASH  &none
-&none  &lt 5 W          &mt LCTRL R     &lt 1 S             &mt LEFT_SHIFT T  &mt F2 G     &kp M        &mt LEFT_SHIFT N            &kp E           &kp I       &mt GRAVE APOS       &none
-&none  &lt 5 C          &mt LC(FSLH) J  &lt 2 V             &kp D             &kp K        &mt LG(X) X  &kp H                       &kp COMMA       &kp PERIOD  &kp A                &none
-                                        &mt LEFT_GUI ENTER  &gui_tap 0 SPACE  &lt 4 TAB    &lt 4 TAB    &repeat_shift LEFT_SHIFT 0  &mt LALT ENTER
+&none  &lt 4 W          &mt LCTRL R     &lt 1 S             &mt LEFT_SHIFT T  &mt F2 G     &kp M        &mt LEFT_SHIFT N            &kp E           &kp I       &mt GRAVE APOS       &none
+&none  &lt 4 C          &mt LC(FSLH) J  &kp V               &kp D             &kp K        &mt LG(X) X  &kp H                       &kp COMMA       &kp PERIOD  &kp A                &none
+                                        &mt LEFT_GUI ENTER  &gui_tap 0 SPACE  &lt 3 TAB    &lt 6 TAB    &repeat_shift LEFT_SHIFT 0  &mt LALT ENTER
             >;
         };
 
@@ -408,16 +408,6 @@
 &none  &trans  &kp LCTRL  &trans  &kp LEFT_SHIFT  &trans    &kp HOME  &kp LEFT     &kp DOWN  &kp RIGHT      &none    &none
 &none  &trans  &trans     &trans  &kp LC(A)       &trans    &trans    &kp HOME     &none     &kp PG_DN      &kp END  &none
                           &trans  &kp LCTRL       &trans    &trans    &kp HOME     &trans
-            >;
-        };
-
-        num_layer {
-            display-name = "number";
-            bindings = <
-&none  &none   &none   &none   &none   &none     &kp GRAVE   &kp N7  &kp N8        &kp N9  &mt FSLH MINUS  &none
-&none  &trans  &trans  &none   &trans  &none     &kp PERIOD  &kp N4  &kp N5        &kp N6  &none           &none
-&none  &trans  &none   &none   &none   &none     &kp BSLH    &kp N0  &kp NUMBER_1  &kp N2  &kp NUMBER_3    &none
-                       &trans  &trans  &trans    &kp PERIOD  &trans  &trans
             >;
         };
 
@@ -464,10 +454,10 @@
         numlayer2 {
             display-name = "number";
             bindings = <
-&trans  &trans  &kp N7  &kp N8        &kp N9        &trans    &trans        &trans        &trans  &trans        &trans  &trans
-&trans  &kp N9  &kp N5  &kp NUMBER_1  &kp NUMBER_3  &kp N7    &kp NUMBER_6  &kp NUMBER_2  &kp N0  &kp NUMBER_4  &kp N8  &trans
-&trans  &kp N9  &kp N1  &kp N2        &kp N7        &trans    &trans        &kp NUMBER_6  &trans  &trans        &kp N8  &trans
-                        &trans        &trans        &trans    &trans        &trans        &trans
+&trans  &trans  &kp N7  &kp N8        &kp N9        &trans    &kp F12  &trans        &trans  &trans        &trans  &trans
+&trans  &kp N9  &kp N5  &kp NUMBER_1  &kp NUMBER_3  &kp N7    &kp F11  &kp NUMBER_2  &kp N0  &kp NUMBER_4  &kp N8  &trans
+&trans  &kp N9  &kp N1  &kp N2        &kp N7        &trans    &kp F10  &kp NUMBER_6  &trans  &trans        &kp N8  &trans
+                        &trans        &trans        &trans    &trans   &trans        &trans
             >;
         };
     };
