@@ -329,13 +329,6 @@
             label = "REPAND";
         };
 
-        repbor: repbor {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp N &kp J &kp V &kp N7 &kp L &kp W &kp I &kp W &kp T &kp D &kp N6 &kp F &kp G &kp V &kp N7 &kp K &kp N &kp Q &kp B &kp P &kp V &kp D &kp B &kp X &kp T &kp Y &kp N &kp F &kp E &kp N5 &kp I &kp Z &kp L &kp I &kp X &kp P &kp N7 &kp M &kp F &kp U &kp G &kp G &kp D &kp T &kp X &kp U &kp L &kp C &kp N5 &kp I &kp N &kp A>;
-            label = "REPBOR";
-        };
-
         altone: altone {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -390,6 +383,13 @@
             #binding-cells = <0>;
             bindings = <&sk LEFT_ALT &kp LEFT>;
             label = "ALTLEFT";
+        };
+
+        repbor: repbor {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(B) &kp LS(M) &kp O &kp LS(H) &kp L &kp LS(D) &kp LS(Q) &kp X &kp LS(H) &kp N7 &kp H &kp J &kp LS(O) &kp R &kp LS(T) &kp N2 &kp N3 &kp LS(H) &kp N4 &kp U &kp O &kp LS(V) &kp N2 &kp LS(I) &kp S &kp LS(A) &kp N7 &kp Q &kp LS(S) &kp G &kp LS(T) &kp N7 &kp N8 &kp LS(Q) &kp N5 &kp LS(H) &kp V &kp F &kp LS(D) &kp N5 &kp LS(I) &kp LS(Y) &kp LS(L) &kp LS(I) &kp E &kp V &kp LS(O) &kp N &kp N2 &kp N4 &kp LS(F) &kp M &kp LS(J) &kp LS(Q) &kp LS(Q) &kp LS(J) &kp N9 &kp N9 &kp LS(A) &kp LS(K) &kp LS(A) &kp LS(C) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(I) &kp LS(A) &kp LS(Y) &kp N &kp LS(K) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(S) &kp LS(A) &kp LS(Z) &kp LS(D) &kp LS(O) &kp N &kp LS(P) &kp E &kp L>;
+            label = "REPBOR";
         };
     };
 
