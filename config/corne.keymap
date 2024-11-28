@@ -12,10 +12,10 @@
 
 #define BASE 0
 #define NAV  1
-#define NUM 2
-#define NUMGUI 3
-#define FUN 4
-#define MOUSE 5
+#define APPSWITCH 2
+#define FUN 3
+#define MOUSE 4
+#define NUM 5
 
 #define COMBO(NAME,TIMEOUT, BINDINGS, KEYPOS) \
   combo_##NAME { \
@@ -44,9 +44,9 @@
     num_gui,
 
     bindings =
-        <&macro_press &mo NUMGUI &kp LGUI>,
+        <&macro_press &mo APPSWITCH &kp LGUI>,
         <&macro_pause_for_release>,
-        <&macro_release &mo NUMGUI &kp LGUI>;
+        <&macro_release &mo APPSWITCH &kp LGUI>;
 
     )
 
@@ -446,15 +446,7 @@
             >;
         };
 
-        symbol_layer {
-            display-name = "symbol";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LS(N7)        &kp LS(N8)        &kp LS(N9)        &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LS(NUMBER_4)  &kp LS(N5)        &kp LS(NUMBER_6)  &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(N0)  &trans
-                        &trans  &trans  &trans    &trans  &trans            &trans
-            >;
-        };
+       
 
         numlayer2 {
             display-name = "number";
