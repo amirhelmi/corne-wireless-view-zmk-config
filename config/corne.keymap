@@ -388,7 +388,7 @@
         repbor: repbor {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(B) &kp LS(M) &kp O &kp LS(H) &kp L &kp LS(D) &kp LS(Q) &kp X &kp LS(H) &kp N7 &kp H &kp J &kp LS(O) &kp R &kp LS(T) &kp N2 &kp N3 &kp LS(H) &kp N4 &kp U &kp O &kp LS(V) &kp N2 &kp LS(I) &kp S &kp LS(A) &kp N7 &kp Q &kp LS(S) &kp G &kp LS(T) &kp N7 &kp N8 &kp LS(Q) &kp N5 &kp LS(H) &kp V &kp F &kp LS(D) &kp N5 &kp LS(I) &kp LS(Y) &kp LS(L) &kp LS(I) &kp E &kp V &kp LS(O) &kp N &kp N2 &kp N4 &kp LS(F) &kp M &kp LS(J) &kp LS(Q) &kp LS(Q) &kp LS(J) &kp N9 &kp N9 &kp LS(A) &kp LS(K) &kp LS(A) &kp LS(C) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(I) &kp LS(A) &kp LS(Y) &kp N &kp LS(K) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(S) &kp LS(A) &kp LS(Z) &kp LS(D) &kp LS(O) &kp N &kp LS(P) &kp E &kp L>;
+            bindings = <&kp LS(B) &kp LS(N) &kp I &kp N0 &kp N4 &kp LS(K) &kp LS(V) &kp LS(H) &kp K &kp LS(Y) &kp LS(Y) &kp LS(D) &kp LS(N) &kp LS(L) &kp LS(W) &kp V &kp N1 &kp W &kp N3 &kp LS(V) &kp Y &kp N &kp LS(T) &kp LS(B) &kp D &kp LS(B) &kp N8 &kp O &kp LS(C) &kp LS(Z) &kp U &kp LS(N) &kp B &kp N7 &kp N3 &kp I &kp N7 &kp LS(F) &kp N6 &kp R &kp D &kp B &kp LS(F) &kp LS(O) &kp W &kp N &kp N2 &kp F &kp B &kp Q &kp LS(D) &kp F &kp LS(J) &kp LS(Q) &kp LS(Q) &kp LS(J) &kp N9 &kp N9 &kp LS(A) &kp LS(L) &kp LS(A) &kp LS(C) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(I) &kp LS(A) &kp LS(Y) &kp N &kp LS(K) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(S) &kp LS(A) &kp LS(Z) &kp LS(D) &kp LS(O) &kp M &kp LS(J) &kp N1 &kp LS(E)>;
             label = "REPBOR";
         };
     };
@@ -429,10 +429,10 @@
         fun_layer {
             display-name = "function";
             bindings = <
-&none  &slogan       &repbor   &altup       &altdown  &althome      &kp F12  &kp F7  &kp F8       &kp F9  &trans        &none
-&none  &repand       &altzero  &altone      &alta     &altleft      &kp F11  &kp F4  &kp F5       &kp F6  &bt BT_SEL 0  &none
-&none  &sk LEFT_ALT  &trans    &trans       &alttwo   &kp LC(F4)    &kp F10  &trans  &kp F1       &kp F2  &kp F3        &none
-                               &bootloader  &trans    &trans        &trans   &trans  &bootloader
+&none  &slogan  &repbor   &altup       &altdown  &althome      &kp F12  &kp F7  &kp F8       &kp F9  &trans        &none
+&none  &repand  &altzero  &altone      &alta     &altleft      &kp F11  &kp F4  &kp F5       &kp F6  &bt BT_SEL 0  &none
+&none  &trans   &trans    &trans       &alttwo   &kp LC(F4)    &kp F10  &trans  &kp F1       &kp F2  &kp F3        &none
+                          &bootloader  &trans    &trans        &trans   &trans  &bootloader
             >;
         };
 
@@ -449,10 +449,10 @@
         numlayer2 {
             display-name = "number";
             bindings = <
-&trans  &trans  &kp N7  &kp N8        &kp N9        &trans            &kp F12  &trans        &trans       &trans        &trans  &trans
-&trans  &kp N9  &kp N5  &kp NUMBER_1  &kp NUMBER_3  &kp N7            &kp F11  &kp NUMBER_2  &kp N0       &kp NUMBER_4  &kp N8  &trans
-&trans  &kp N9  &kp N1  &kp N2        &kp N7        &trans            &kp F10  &kp NUMBER_6  &trans       &trans        &kp N8  &trans
-                        &trans        &trans        &kp LEFT_SHIFT    &trans   &trans        &bootloader
+&trans  &trans  &kp N7  &kp N8        &kp N9        &trans            &kp F12      &trans        &trans       &trans        &trans  &trans
+&trans  &kp N9  &kp N5  &kp NUMBER_1  &kp NUMBER_3  &key_repeat       &key_repeat  &kp NUMBER_2  &kp N0       &kp NUMBER_4  &kp N8  &trans
+&trans  &kp N9  &kp N1  &kp N2        &kp N7        &trans            &kp F10      &kp NUMBER_6  &trans       &trans        &kp N8  &trans
+                        &trans        &trans        &kp LEFT_SHIFT    &trans       &trans        &bootloader
             >;
         };
     };
