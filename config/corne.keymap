@@ -9,7 +9,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
 #define NAV  1
@@ -153,19 +152,9 @@
             key-positions = <26 27>;
         };
 
-        click {
-            bindings = <&mkp LCLK>;
-            key-positions = <39 40>;
-        };
-
         semicolon {
             bindings = <&kp SEMICOLON>;
             key-positions = <40 34>;
-        };
-
-        rightclick {
-            bindings = <&mkp RCLK>;
-            key-positions = <40 41>;
         };
 
         resetble {
@@ -440,10 +429,10 @@
         mouse_layer {
             display-name = "utility";
             bindings = <
-&none  &none  &none  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &kp C_MUTE    &none   &trans          &mmv MOVE_UP    &trans           &trans  &trans
-&none  &none  &none  &kp C_BRI_DEC         &kp C_VOLUME_DOWN  &kp CAPS      &none   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&none  &none  &none  &none                 &trans             &none         &none   &none           &none           &none            &none   &none
-                     &trans                &trans             &trans        &trans  &trans          &trans
+&none  &none  &none  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &kp C_MUTE    &none   &trans  &trans  &trans  &trans  &trans
+&none  &none  &none  &kp C_BRI_DEC         &kp C_VOLUME_DOWN  &kp CAPS      &none   &trans  &trans  &trans  &trans  &trans
+&none  &none  &none  &none                 &trans             &none         &none   &none   &none   &none   &none   &none
+                     &trans                &trans             &trans        &trans  &trans  &trans
             >;
         };
 
