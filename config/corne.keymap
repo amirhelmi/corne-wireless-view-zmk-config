@@ -9,6 +9,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
 #define NAV  1
@@ -267,6 +268,11 @@
             bindings = <&tog 5>;
             key-positions = <38 39>;
         };
+
+        leftclick {
+            bindings = <&mkp LCLK>;
+            key-positions = <39 40>;
+        };
     };
 
     macros {
@@ -392,7 +398,7 @@
 &none  &mt LG(LS(S)) Q  &kp L           &mt LG(D) Y         &mt F5 P          &mt F6 B     &kp Z        &kp F                       &kp O           &kp U       &mt BACKSLASH SLASH  &none
 &none  &lt 4 W          &mt LCTRL R     &lt 1 S             &mt LEFT_SHIFT T  &mt F2 G     &kp M        &mt LEFT_SHIFT N            &kp E           &kp I       &mt GRAVE APOS       &none
 &none  &lt 4 C          &mt LC(FSLH) J  &kp V               &kp D             &kp K        &mt LG(X) X  &kp H                       &kp COMMA       &kp PERIOD  &kp A                &none
-                                        &mt LEFT_GUI ENTER  &gui_tap 0 SPACE  &lt 3 TAB    &lt 5 TAB    &repeat_shift LEFT_SHIFT 0  &mt LALT ENTER
+                                        &mt LEFT_GUI ENTER  &gui_tap 0 SPACE  &lt 3 TAB    &mo 5        &repeat_shift LEFT_SHIFT 0  &mt LALT ENTER
             >;
         };
 
