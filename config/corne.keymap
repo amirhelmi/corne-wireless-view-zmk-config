@@ -52,8 +52,6 @@
 
     )
 
-  
-
     behaviors {
         repeat_shift: repeat_shift {
             compatible = "zmk,behavior-hold-tap";
@@ -253,13 +251,12 @@
     };
 
     macros {
-
         to_space: to_space {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to BASE &kp SPACE>;
             label = "to_space";
-        }
+        };
 
         info: info {
             compatible = "zmk,behavior-macro";
@@ -410,9 +407,9 @@
         fun_layer {
             display-name = "function";
             bindings = <
-&none  &slogan  &repbor       &altup        &altdown  &althome      &kp F12  &kp F7  &kp F8       &kp F9  &studio_unlock  &none
-&none  &repand  &altzero      &altone       &alta     &altleft      &kp F11  &kp F4  &kp F5       &kp F6  &trans          &none
-&none  &trans   &bt BT_SEL 0  &bt BT_SEL 1  &alttwo   &kp LC(F4)    &kp F10  &trans  &kp F1       &kp F2  &bt BT_CLR      &none
+&none  &slogan  &repbor       &altup        &altdown  &althome      &kp F12  &kp F7  &kp F8       &kp F9  &none       &none
+&none  &repand  &altzero      &altone       &alta     &altleft      &kp F11  &kp F4  &kp F5       &kp F6  &trans      &none
+&none  &trans   &bt BT_SEL 0  &bt BT_SEL 1  &alttwo   &kp LC(F4)    &kp F10  &kp F1  &kp F2       &kp F3  &bt BT_CLR  &none
                               &bootloader   &trans    &trans        &trans   &trans  &bootloader
             >;
         };
