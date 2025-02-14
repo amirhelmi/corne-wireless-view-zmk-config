@@ -348,27 +348,6 @@
             bindings = <&kp LS(D) &kp N6 &kp N4 &kp LS(E) &kp LS(J) &kp P &kp J &kp M &kp M &kp N &kp I &kp Z &kp X &kp LS(G) &kp C &kp P &kp LS(S) &kp Y &kp LS(G) &kp Y &kp LS(B) &kp W &kp N6 &kp LS(G) &kp W &kp N3 &kp LS(F) &kp LS(G) &kp LS(I) &kp N9 &kp LS(N) &kp B &kp J &kp I &kp J &kp LS(U) &kp LS(T) &kp L &kp V &kp S &kp V &kp LS(K) &kp LS(W) &kp N1 &kp LS(A) &kp N7 &kp N7 &kp M &kp LS(H) &kp LS(A) &kp LS(P) &kp B &kp LS(J) &kp LS(Q) &kp LS(Q) &kp LS(J) &kp N9 &kp N9 &kp LS(B) &kp LS(B) &kp LS(A) &kp LS(C) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(I) &kp LS(A) &kp LS(Y) &kp N &kp LS(K) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(S) &kp LS(A) &kp LS(Z) &kp LS(D) &kp LS(O) &kp E &kp W &kp J &kp LS(W)>;
             label = "REPBOR";
         };
-
-        mo_num: mo_num {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mo 5>;
-            label = "MO_NUM";
-        };
-
-        tog_num: tog_num {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&tog 5>;
-            label = "TOG_NUM";
-        };
-
-        mo_fun: mo_fun {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mo 3>;
-            label = "MO_FUN";
-        };
     };
 
     keymap {
