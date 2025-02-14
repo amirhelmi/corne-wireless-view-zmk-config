@@ -74,6 +74,16 @@
         };
     };
 
+behaviors {
+        num_num: num_num {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <1000>;
+            require-prior-idle-ms = <130>;
+            bindings = <&mo NUM>, <&tog NUM>;
+        };
+    };
  
     combos {
         compatible = "zmk,combos";
