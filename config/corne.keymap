@@ -52,15 +52,7 @@
 
     )
 
-   ZMK_MACRO(
-
-    to_space,
-    bindings =
-        <&macro_press &to BASE >,
-        <&macro_pause_for_release>,
-        <&macro_release &kp SPACE>;
-    )
-
+  
 
     behaviors {
         repeat_shift: repeat_shift {
@@ -261,6 +253,14 @@
     };
 
     macros {
+
+        to_space: to_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to BASE &kp SPACE>;
+            label = "to_space";
+        }
+
         info: info {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
