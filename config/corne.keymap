@@ -59,7 +59,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <1000>;
             require-prior-idle-ms = <130>;
-            bindings = <&mo FUN>, <&key_repeat>;
+            bindings = <&mo_fun>, <&key_repeat>;
         };
     };
 
@@ -377,6 +377,13 @@
             #binding-cells = <0>;
             bindings = <&tog 5>;
             label = "TOG_NUM";
+        };
+
+        mo_fun: mo_fun {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mo 3>;
+            label = "MO_FUN";
         };
     };
 
