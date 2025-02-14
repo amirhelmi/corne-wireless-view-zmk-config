@@ -441,10 +441,10 @@
         numlayer2 {
             display-name = "number";
             bindings = <
-&trans  &trans  &none   &none         &none         &trans         &none        &trans        &trans       &trans        &trans  &trans
-&trans  &none   &kp N5  &kp NUMBER_1  &kp NUMBER_3  &key_repeat    &key_repeat  &kp NUMBER_2  &kp N0       &kp NUMBER_4  &kp N8  &trans
-&trans  &kp N9  &none   &none         &kp N7        &trans         &none        &kp NUMBER_6  &trans       &trans        &kp N8  &trans
-                        &trans        &to 0         &trans         &trans       &trans        &bootloader
+&trans  &trans  &none   &none         &none         &trans         &none        &trans        &trans  &trans        &trans  &trans
+&trans  &none   &kp N5  &kp NUMBER_1  &kp NUMBER_3  &key_repeat    &key_repeat  &kp NUMBER_2  &kp N0  &kp NUMBER_4  &kp N8  &trans
+&trans  &kp N9  &none   &none         &kp N7        &trans         &none        &kp NUMBER_6  &trans  &trans        &kp N8  &trans
+                        &trans        &to 0         &trans         &bootloader  &trans        &to 0
             >;
         };
     };
