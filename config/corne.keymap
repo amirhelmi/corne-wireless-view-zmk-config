@@ -81,7 +81,7 @@
             flavor = "hold-preferred";
             tapping-term-ms = <1000>;
             require-prior-idle-ms = <130>;
-            bindings = <&mo>, <&tog>;
+            bindings = <&mo NUM>, <&tog NUM>;
         };
     };
 
@@ -375,7 +375,7 @@
 &none  &mt LG(LS(S)) Q  &kp L           &mt LG(D) Y         &mt F5 P          &mt F6 B     &kp Z           &kp F             &kp O         &kp U       &mt BACKSLASH SLASH  &none
 &none  &lt 4 W          &mt LCTRL R     &lt 1 S             &mt LEFT_SHIFT T  &mt F2 G     &kp M           &mt LEFT_SHIFT N  &kp E         &kp I       &mt GRAVE APOS       &none
 &none  &lt 4 C          &mt LC(FSLH) J  &kp V               &kp D             &kp K        &mt LG(X) X     &kp H             &kp COMMA     &kp PERIOD  &kp A                &none
-                                        &mt LEFT_GUI ENTER  &gui_tap 0 SPACE  &lt 3 TAB    &sk LEFT_SHIFT  &fun_repeat 0 0   &num_num 5 5
+                                        &mt LEFT_GUI ENTER  &gui_tap 0 SPACE  &lt 3 TAB    &sk LEFT_SHIFT  &fun_repeat 0 0   &num_num 0 0
             >;
         };
 
