@@ -169,7 +169,7 @@
 
         capword {
             bindings = <&caps_word>;
-            key-positions = <37 40>;
+            key-positions = <38 39>;
         };
 
         stickyalt {
@@ -230,7 +230,7 @@
 
         numpad {
             bindings = <&tog 5>;
-            key-positions = <19 16>;
+            key-positions = <40 37>;
         };
 
         fn12 {
