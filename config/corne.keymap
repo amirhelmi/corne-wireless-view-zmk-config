@@ -72,8 +72,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <200>;
-            hold-while-undecided;
+            tapping-term-ms = <250>;
         };
     };
 
