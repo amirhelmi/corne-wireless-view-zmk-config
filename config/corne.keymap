@@ -98,12 +98,12 @@
         };
 
         cutcopy {
-            bindings = <&mt LC(X) LC(C)>;
+            bindings = <&kp LC(C)>;
             key-positions = <14 15>;
         };
 
         paste {
-            bindings = <&mt LCTRL LC(V)>;
+            bindings = <&kp LC(LCTRL)>;
             key-positions = <15 16>;
         };
 
@@ -246,6 +246,21 @@
         f10 {
             bindings = <&kp F10>;
             key-positions = <30 31>;
+        };
+
+        f2 {
+            bindings = <&kp F2>;
+            key-positions = <7 8>;
+        };
+
+        cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <14 15 16>;
+        };
+
+        stickyshift {
+            bindings = <&sk LEFT_SHIFT>;
+            key-positions = <14 2>;
         };
     };
 
@@ -406,10 +421,10 @@
         fun_layer {
             display-name = "function";
             bindings = <
-&none  &slogan  &repbor       &altup        &altdown  &althome      &kp F12  &kp F7  &kp F8       &kp F9  &none       &none
-&none  &repand  &altzero      &altone       &alta     &altleft      &kp F11  &kp F4  &kp F5       &kp F6  &trans      &none
-&none  &trans   &bt BT_SEL 0  &bt BT_SEL 1  &alttwo   &kp LC(F4)    &kp F10  &kp F1  &kp F2       &kp F3  &bt BT_CLR  &none
-                              &bootloader   &trans    &trans        &trans   &trans  &bootloader
+&none  &slogan  &repbor       &altup          &altdown      &althome      &kp F12  &kp F7        &kp F8       &kp F9        &none   &none
+&none  &repand  &kp N5        &lt 1 NUMBER_1  &kp NUMBER_3  &altleft      &kp F11  &kp NUMBER_2  &kp N0       &kp NUMBER_4  &trans  &none
+&none  &kp N9   &bt BT_SEL 0  &bt BT_SEL 1    &kp N7        &kp LC(F4)    &kp F10  &kp NUMBER_6  &kp F2       &kp F3        &kp N8  &none
+                              &bootloader     &trans        &trans        &trans   &trans        &bootloader
             >;
         };
 
@@ -426,10 +441,10 @@
         numlayer2 {
             display-name = "number";
             bindings = <
-&trans  &trans  &none   &none         &none         &trans         &none        &trans        &trans  &trans        &trans  &trans
-&trans  &none   &kp N5  &kp NUMBER_1  &kp NUMBER_3  &key_repeat    &key_repeat  &kp NUMBER_2  &kp N0  &kp NUMBER_4  &none   &trans
-&trans  &kp N9  &none   &none         &kp N7        &trans         &none        &kp NUMBER_6  &trans  &trans        &kp N8  &trans
-                        &trans        &to_space     &trans         &bootloader  &trans        &trans
+&trans  &trans  &none   &none           &none         &trans         &none        &trans        &trans  &trans        &trans  &trans
+&trans  &none   &kp N5  &lt 1 NUMBER_1  &kp NUMBER_3  &key_repeat    &key_repeat  &kp NUMBER_2  &kp N0  &kp NUMBER_4  &none   &trans
+&trans  &kp N9  &none   &none           &kp N7        &trans         &none        &kp NUMBER_6  &trans  &trans        &kp N8  &trans
+                        &trans          &to_space     &trans         &bootloader  &trans        &trans
             >;
         };
     };
