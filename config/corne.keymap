@@ -239,7 +239,7 @@
         };
 
         numpad {
-            bindings = <&sl 5>;
+            bindings = <&sl 0>;
             key-positions = <40 37>;
         };
 
@@ -278,7 +278,7 @@
         to_space: to_space {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to BASE &kp SPACE>;
+            bindings = <&to 0 &kp SPACE>;
             label = "to_space";
         };
 
@@ -402,9 +402,19 @@
             display-name = "alphabet";
             bindings = <
 &none  &mt LG(LS(S)) Q  &kp L           &mt LG(D) Y         &mt F5 P          &mt F6 B          &kp Z           &kp F             &kp O                   &kp U       &mt BACKSLASH SLASH  &none
-&none  &lt 4 W          &mt LCTRL R     &lt 1 S             &mt LEFT_SHIFT T  &mt F2 G          &kp M           &mt LEFT_SHIFT N  &kp E                   &kp I       &mt GRAVE APOS       &none
+&none  &lt 4 W          &mt LCTRL R     &lt 2 S             &mt LEFT_SHIFT T  &mt F2 G          &kp M           &mt LEFT_SHIFT N  &kp E                   &kp I       &mt GRAVE APOS       &none
 &none  &lt 4 C          &mt LC(FSLH) J  &kp V               &kp D             &kp K             &mt LG(X) X     &kp H             &kp COMMA               &kp PERIOD  &kp A                &none
-                                        &mt LEFT_GUI ENTER  &lt 3 SPACE       &gui_tap 0 TAB    &sk LEFT_SHIFT  &num_repeat 3 0   &mt LC(LEFT_ALT) ENTER
+                                        &mt LEFT_GUI ENTER  &lt 1 SPACE       &gui_tap 0 TAB    &sk LEFT_SHIFT  &num_repeat 1 0   &mt LC(LEFT_ALT) ENTER
+            >;
+        };
+
+        num_layer {
+            display-name = "number";
+            bindings = <
+&none  &slogan  &repbor       &altup          &altdown      &althome      &kp F12    &kp F7        &kp F8       &kp F9        &none   &none
+&none  &repand  &kp N5        &lt 2 NUMBER_1  &kp NUMBER_3  &altleft      &kp F11    &kp NUMBER_2  &kp N0       &kp NUMBER_4  &trans  &none
+&none  &kp N9   &bt BT_SEL 0  &bt BT_SEL 1    &kp N7        &kp LC(F4)    &kp F10    &kp NUMBER_6  &kp F2       &kp F3        &kp N8  &none
+                              &bootloader     &trans        &trans        &kp SPACE  &trans        &bootloader
             >;
         };
 
@@ -428,18 +438,8 @@
             >;
         };
 
-        fun_layer {
-            display-name = "function";
-            bindings = <
-&none  &slogan  &repbor       &altup          &altdown      &althome      &kp F12  &kp F7        &kp F8       &kp F9        &none   &none
-&none  &repand  &kp N5        &lt 1 NUMBER_1  &kp NUMBER_3  &altleft      &kp F11  &kp NUMBER_2  &kp N0       &kp NUMBER_4  &trans  &none
-&none  &kp N9   &bt BT_SEL 0  &bt BT_SEL 1    &kp N7        &kp LC(F4)    &kp F10  &kp NUMBER_6  &kp F2       &kp F3        &kp N8  &none
-                              &bootloader     &trans        &trans        &trans   &trans        &bootloader
-            >;
-        };
-
-        mouse_layer {
-            display-name = "utility";
+        misc_layer {
+            display-name = "misc";
             bindings = <
 &none  &none  &none  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &none       &none   &trans  &trans  &trans  &trans  &trans
 &none  &none  &none  &kp C_BRI_DEC         &kp C_VOLUME_DOWN  &kp CAPS    &none   &trans  &trans  &trans  &trans  &trans
@@ -447,24 +447,7 @@
                      &trans                &trans             &trans      &trans  &trans  &trans
             >;
         };
-
-        numlayer2 {
-            display-name = "number";
-            bindings = <
-&trans  &trans  &none   &none           &none         &trans         &none        &trans        &trans  &trans        &trans  &trans
-&trans  &none   &kp N5  &lt 1 NUMBER_1  &kp NUMBER_3  &key_repeat    &key_repeat  &kp NUMBER_2  &kp N0  &kp NUMBER_4  &none   &trans
-&trans  &kp N9  &none   &none           &kp N7        &trans         &none        &kp NUMBER_6  &trans  &trans        &kp N8  &trans
-                        &trans          &to_space     &trans         &kp SPACE    &trans        &trans
-            >;
-        };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        test {
-            if-layers = <3>;
-            then-layer = <1>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
