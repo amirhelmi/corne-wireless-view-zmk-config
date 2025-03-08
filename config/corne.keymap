@@ -200,8 +200,8 @@
             key-positions = <26 15>;
         };
 
-        redo {
-            bindings = <&kp LC(Y)>;
+        altspace {
+            bindings = <&kp LA(SPACE)>;
             key-positions = <2 3>;
         };
 
@@ -210,7 +210,7 @@
             key-positions = <3 4>;
         };
 
-        typedetail {
+        calc_rel {
             bindings = <&mt LC(R) LC(D)>;
             key-positions = <14 3>;
             require-prior-idle-ms = <180>;
@@ -232,7 +232,7 @@
         };
 
         numpad {
-            bindings = <&sl 0>;
+            bindings = <&tog 1>;
             key-positions = <40 37>;
         };
 
@@ -242,7 +242,7 @@
         };
 
         fn11 {
-            bindings = <&kp F12>;
+            bindings = <&kp F11>;
             key-positions = <18 19>;
         };
 
