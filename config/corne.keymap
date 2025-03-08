@@ -66,6 +66,7 @@
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <1000>;
+            require-prior-idle-ms = <150>;
         };
     };
 
