@@ -115,8 +115,8 @@
             key-positions = <28 27>;
         };
 
-        menu {
-            bindings = <&kp K_APP>;
+        altone {
+            bindings = <&altone>;
             key-positions = <26 27>;
         };
 
@@ -165,8 +165,8 @@
             key-positions = <40 9>;
         };
 
-        shifttab {
-            bindings = <&kp LS(TAB)>;
+        menu {
+            bindings = <&kp K_APP>;
             key-positions = <38 37>;
         };
 
@@ -269,6 +269,11 @@
         f6 {
             bindings = <&kp F6>;
             key-positions = <8 9>;
+        };
+
+        altzero {
+            bindings = <&altzero>;
+            key-positions = <39 40>;
         };
     };
 
