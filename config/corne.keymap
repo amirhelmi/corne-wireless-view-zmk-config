@@ -165,8 +165,8 @@
             key-positions = <40 9>;
         };
 
-        switchapp {
-            bindings = <&gui_tap 0 SPACE>;
+        shifttab {
+            bindings = <&kp LS(TAB)>;
             key-positions = <38 37>;
         };
 
