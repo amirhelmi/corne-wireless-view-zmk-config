@@ -393,7 +393,7 @@
         repbor: repbor {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(D) &kp N6 &kp N4 &kp LS(E) &kp LS(J) &kp P &kp J &kp M &kp M &kp N &kp I &kp Z &kp X &kp LS(G) &kp C &kp P &kp LS(S) &kp Y &kp LS(G) &kp Y &kp LS(B) &kp W &kp N6 &kp LS(G) &kp W &kp N3 &kp LS(F) &kp LS(G) &kp LS(I) &kp N9 &kp LS(N) &kp B &kp J &kp I &kp J &kp LS(U) &kp LS(T) &kp L &kp V &kp S &kp V &kp LS(K) &kp LS(W) &kp N1 &kp LS(A) &kp N7 &kp N7 &kp M &kp LS(H) &kp LS(A) &kp LS(P) &kp B &kp LS(J) &kp LS(Q) &kp LS(Q) &kp LS(J) &kp N9 &kp N9 &kp LS(B) &kp LS(B) &kp LS(A) &kp LS(C) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(I) &kp LS(A) &kp LS(Y) &kp N &kp LS(K) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(S) &kp LS(A) &kp LS(Z) &kp LS(D) &kp LS(O) &kp E &kp W &kp J &kp LS(W)>;
+            bindings = <&kp LS(D) &kp LS(J) &kp S &kp LS(U) &kp I &kp LS(T) &kp I &kp R &kp LS(O) &kp P &kp LS(Y) &kp X &kp LS(Q) &kp O &kp LS(S) &kp LS(P) &kp N3 &kp LS(Y) &kp S &kp LS(H) &kp LS(N) &kp LS(Z) &kp LS(B) &kp LS(K) &kp LS(D) &kp V &kp LS(O) &kp I &kp LS(F) &kp L &kp U &kp X &kp Z &kp F &kp N8 &kp LS(L) &kp LS(P) &kp M &kp C &kp LS(S) &kp N6 &kp LS(O) &kp LS(A) &kp C &kp U &kp LS(Y) &kp LS(D) &kp LS(Z) &kp LS(A) &kp LS(F) &kp N8 &kp LS(L) &kp LS(J) &kp LS(Q) &kp LS(Q) &kp LS(J) &kp N9 &kp N9 &kp LS(B) &kp LS(C) &kp LS(A) &kp LS(C) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(I) &kp LS(A) &kp LS(Y) &kp N &kp LS(K) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(S) &kp LS(A) &kp LS(Z) &kp LS(D) &kp LS(O) &kp N1 &kp LS(U) &kp C &kp N>;
             label = "REPBOR";
         };
     };
@@ -406,7 +406,7 @@
             bindings = <
 &none  &mt LG(LS(S)) Q  &kp L           &mt LG(D) Y       &mt F5 P          &mt F6 B    &kp Z           &kp F             &kp O            &kp U       &mt BACKSLASH SLASH  &none
 &none  &lt 4 W          &mt LCTRL R     &lt 2 S           &mt LEFT_SHIFT T  &mt F2 G    &kp M           &mt LEFT_SHIFT N  &kp E            &kp I       &mt GRAVE APOS       &none
-&none  &lt 4 C          &mt LC(FSLH) J  &kp V             &kp D             &kp K       &mt LG(X) X     &kp H             &kp COMMA        &kp PERIOD  &kp A                &none
+&none  &kp C            &mt LC(FSLH) J  &kp V             &kp D             &kp K       &mt LG(X) X     &kp H             &kp COMMA        &kp PERIOD  &kp A                &none
                                         &gui_tap 0 ENTER  &lt 1 SPACE       &kp TAB     &sk LEFT_SHIFT  &num_repeat 1 0   &mt LG(L) ENTER
             >;
         };
