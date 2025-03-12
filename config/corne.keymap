@@ -200,8 +200,8 @@
             key-positions = <26 15>;
         };
 
-        altspace {
-            bindings = <&kp LA(SPACE)>;
+        redo {
+            bindings = <&kp LC(Y)>;
             key-positions = <2 3>;
         };
 
@@ -231,11 +231,6 @@
             key-positions = <15 37>;
         };
 
-        numpad {
-            bindings = <&tog 1>;
-            key-positions = <40 37>;
-        };
-
         fn12 {
             bindings = <&kp F12>;
             key-positions = <6 7>;
@@ -253,7 +248,7 @@
 
         f2 {
             bindings = <&kp F2>;
-            key-positions = <7 8>;
+            key-positions = <17 16>;
         };
 
         cut {
@@ -268,12 +263,22 @@
 
         f6 {
             bindings = <&kp F6>;
-            key-positions = <8 9>;
+            key-positions = <29 28>;
         };
 
         altzero {
             bindings = <&altzero>;
             key-positions = <39 40>;
+        };
+
+        hash {
+            bindings = <&kp HASH>;
+            key-positions = <19 30>;
+        };
+
+        at {
+            bindings = <&kp AT>;
+            key-positions = <16 29>;
         };
     };
 
