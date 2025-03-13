@@ -431,7 +431,7 @@
             bindings = <
 &none  &trans  &trans     &trans  &trans          &trans    &trans  &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &trans   &none
 &none  &trans  &kp LCTRL  &trans  &kp LEFT_SHIFT  &trans    &none   &kp LEFT     &kp DOWN  &kp RIGHT      &none    &none
-&none  &trans  &trans     &trans  &kp LC(A)       &trans    &trans  &none        &none     &none          &kp END  &none
+&none  &trans  &trans     &trans  &kp LC(A)       &trans    &trans  &kp K_APP    &none     &none          &kp END  &none
                           &trans  &trans          &trans    &trans  &kp HOME     &trans
             >;
         };
