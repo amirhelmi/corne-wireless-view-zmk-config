@@ -273,12 +273,12 @@
 
         hash {
             bindings = <&kp HASH>;
-            key-positions = <19 30>;
+            key-positions = <29 16>;
         };
 
         at {
             bindings = <&kp AT>;
-            key-positions = <16 29>;
+            key-positions = <30 19>;
         };
     };
 
