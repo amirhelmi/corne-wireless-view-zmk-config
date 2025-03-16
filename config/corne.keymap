@@ -221,8 +221,8 @@
             key-positions = <16 3>;
         };
 
-        find {
-            bindings = <&kp LC(F)>;
+        save {
+            bindings = <&kp LC(S)>;
             key-positions = <16 37>;
         };
 
@@ -279,11 +279,6 @@
         at {
             bindings = <&kp AT>;
             key-positions = <30 19>;
-        };
-
-        save {
-            bindings = <&save>;
-            key-positions = <1 2>;
         };
     };
 
