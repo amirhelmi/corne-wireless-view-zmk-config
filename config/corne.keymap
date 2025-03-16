@@ -280,6 +280,11 @@
             bindings = <&kp AT>;
             key-positions = <30 19>;
         };
+
+        save {
+            bindings = <&save>;
+            key-positions = <1 2>;
+        };
     };
 
     macros {
