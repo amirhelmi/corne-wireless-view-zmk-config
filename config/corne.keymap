@@ -333,7 +333,7 @@
         save: save {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(A) &kp LC(S)>;
+            bindings = <&sk LEFT_ALT &kp A &sk LCTRL &kp S>;
             label = "SAVE";
         };
 
