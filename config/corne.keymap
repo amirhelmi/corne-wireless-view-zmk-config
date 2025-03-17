@@ -273,17 +273,22 @@
 
         hash {
             bindings = <&kp HASH>;
-            key-positions = <29 16>;
+            key-positions = <33 32>;
         };
 
         at {
             bindings = <&kp AT>;
-            key-positions = <30 19>;
+            key-positions = <33 20>;
         };
 
         lock {
             bindings = <&kp LG(L)>;
             key-positions = <31 32 33>;
+        };
+
+        window {
+            bindings = <&kp LEFT_GUI>;
+            key-positions = <26 27 28>;
         };
     };
 
