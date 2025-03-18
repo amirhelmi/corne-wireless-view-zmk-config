@@ -295,7 +295,7 @@
         };
 
         f5 {
-            bindings = <&kp F6>;
+            bindings = <&kp F5>;
             key-positions = <4 5>;
         };
 
