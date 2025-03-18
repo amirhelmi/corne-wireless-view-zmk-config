@@ -486,10 +486,10 @@
         misc_layer {
             display-name = "misc";
             bindings = <
-&none  &none  &none  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &none       &none   &kp C_AC_SCROLL_UP    &kp LC(KP_N8)  &trans         &trans  &trans
-&none  &none  &none  &kp C_BRI_DEC         &kp C_VOLUME_DOWN  &kp CAPS    &trans  &kp LC(KP_NUMBER_4)   &kp LC(KP_N2)  &kp LC(KP_N6)  &trans  &trans
-&none  &none  &none  &none                 &kp C_MUTE         &none       &none   &kp C_AC_SCROLL_DOWN  &none          &none          &trans  &none
-                     &trans                &trans             &trans      &trans  &trans                &trans
+&none  &none  &none  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &none       &none   &kp LC(KP_NUMBER_7)  &kp LC(KP_N8)        &kp LC(KP_NUMBER_9)  &trans  &trans
+&none  &none  &none  &kp C_BRI_DEC         &kp C_VOLUME_DOWN  &kp CAPS    &trans  &kp LC(KP_NUMBER_4)  &kp LC(KP_N2)        &kp LC(KP_N6)        &trans  &trans
+&none  &none  &none  &none                 &kp C_MUTE         &none       &none   &kp LC(KP_NUMBER_1)  &kp LC(KP_NUMBER_2)  &kp LC(KP_NUMBER_3)  &trans  &none
+                     &trans                &trans             &trans      &trans  &trans               &trans
             >;
         };
     };
