@@ -428,14 +428,14 @@
         leftclick: leftclick {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SLASH &kp KP_N5>;
+            bindings = <&kp KP_DIVIDE &kp KP_N5>;
             label = "LEFTCLICK";
         };
 
         rightclick: rightclick {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp MINUS &kp KP_N5>;
+            bindings = <&kp KP_SUBTRACT &kp KP_N5>;
             label = "RIGHTCLICK";
         };
     };
