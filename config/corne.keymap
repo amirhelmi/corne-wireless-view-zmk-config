@@ -9,6 +9,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define COMBO(NAME,TIMEOUT, BINDINGS, KEYPOS) \
   combo_##NAME { \
@@ -100,8 +101,8 @@
             key-positions = <7 19>;
         };
 
-        cutcopy {
-            bindings = <&kp LC(C)>;
+        copyctrl {
+            bindings = <&mt LC(LCTRL) LC(C)>;
             key-positions = <14 15>;
         };
 
@@ -266,8 +267,8 @@
             key-positions = <29 28>;
         };
 
-        altzero {
-            bindings = <&altzero>;
+        leftclick {
+            bindings = <&mkp LCLK>;
             key-positions = <39 40>;
         };
 
@@ -289,6 +290,16 @@
         lock {
             bindings = <&kp LG(L)>;
             key-positions = <31 32 33>;
+        };
+
+        altzero {
+            bindings = <&altzero>;
+            key-positions = <1 2>;
+        };
+
+        f5 {
+            bindings = <&kp F6>;
+            key-positions = <4 5>;
         };
     };
 
@@ -419,8 +430,8 @@
         default_layer {
             display-name = "alphabet";
             bindings = <
-&none  &mt LG(LS(S)) Q  &kp L           &mt LG(D) Y       &mt F5 P          &mt F6 B    &kp Z           &kp F             &kp O       &kp U       &mt BACKSLASH SLASH  &none
-&none  &lt 4 W          &mt LCTRL R     &lt 2 S           &mt LEFT_SHIFT T  &mt F2 G    &kp M           &mt LEFT_SHIFT N  &kp E       &kp I       &mt GRAVE APOS       &none
+&none  &mt LG(LS(S)) Q  &kp L           &mt LG(D) Y       &kp P             &kp B       &kp Z           &kp F             &kp O       &kp U       &mt BACKSLASH SLASH  &none
+&none  &kp W            &lt 4 R         &lt 2 S           &mt LEFT_SHIFT T  &mt F2 G    &kp M           &mt LEFT_SHIFT N  &kp E       &kp I       &mt GRAVE APOS       &none
 &none  &kp C            &mt LC(FSLH) J  &kp V             &kp D             &kp K       &mt LG(X) X     &kp H             &kp COMMA   &kp PERIOD  &kp A                &none
                                         &gui_tap 0 ENTER  &lt 1 SPACE       &kp TAB     &sk LEFT_SHIFT  &num_repeat 1 0   &kp RETURN
             >;
@@ -459,10 +470,10 @@
         misc_layer {
             display-name = "misc";
             bindings = <
-&none  &none  &none  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &none       &none   &trans  &trans  &trans  &trans  &trans
-&none  &none  &none  &kp C_BRI_DEC         &kp C_VOLUME_DOWN  &kp CAPS    &none   &trans  &trans  &trans  &trans  &trans
-&none  &none  &none  &none                 &kp C_MUTE         &none       &none   &none   &none   &none   &none   &none
-                     &trans                &trans             &trans      &trans  &trans  &trans
+&none  &none  &none  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &none       &none           &msc SCRL_UP    &mmv MOVE_UP    &trans           &trans           &trans
+&none  &none  &none  &kp C_BRI_DEC         &kp C_VOLUME_DOWN  &kp CAPS    &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
+&none  &none  &none  &none                 &kp C_MUTE         &none       &none           &msc SCRL_DOWN  &none           &none            &msc SCRL_RIGHT  &none
+                     &trans                &trans             &trans      &trans          &trans          &trans
             >;
         };
     };
