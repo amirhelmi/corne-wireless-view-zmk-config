@@ -438,13 +438,6 @@
             label = "ALTLEFT";
         };
 
-        repbor: repbor {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(D) &kp LS(J) &kp S &kp LS(U) &kp I &kp LS(T) &kp I &kp R &kp LS(O) &kp P &kp LS(Y) &kp X &kp LS(Q) &kp O &kp LS(S) &kp LS(P) &kp N3 &kp LS(Y) &kp S &kp LS(H) &kp LS(N) &kp LS(Z) &kp LS(B) &kp LS(K) &kp LS(D) &kp V &kp LS(O) &kp I &kp LS(F) &kp L &kp U &kp X &kp Z &kp F &kp N8 &kp LS(L) &kp LS(P) &kp M &kp C &kp LS(S) &kp N6 &kp LS(O) &kp LS(A) &kp C &kp U &kp LS(Y) &kp LS(D) &kp LS(Z) &kp LS(A) &kp LS(F) &kp N8 &kp LS(L) &kp LS(J) &kp LS(Q) &kp LS(Q) &kp LS(J) &kp N9 &kp N9 &kp LS(B) &kp LS(C) &kp LS(A) &kp LS(C) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(I) &kp LS(A) &kp LS(Y) &kp N &kp LS(K) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(S) &kp LS(A) &kp LS(Z) &kp LS(D) &kp LS(O) &kp N1 &kp LS(U) &kp C &kp N>;
-            label = "REPBOR";
-        };
-
         leftclick: leftclick {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -457,6 +450,13 @@
             #binding-cells = <0>;
             bindings = <&kp KP_SUBTRACT &kp KP_N5>;
             label = "RIGHTCLICK";
+        };
+
+        repbor: repbor {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(C) &kp N4 &kp LS(G) &kp LS(K) &kp P &kp LS(T) &kp LS(H) &kp LS(S) &kp LS(I) &kp N &kp L &kp M &kp LS(I) &kp N9 &kp LS(Z) &kp U &kp N &kp N4 &kp LS(A) &kp LS(J) &kp E &kp LS(M) &kp J &kp LS(V) &kp LS(M) &kp N2 &kp N4 &kp N5 &kp N6 &kp N3 &kp N2 &kp D &kp LS(F) &kp LS(Y) &kp LS(I) &kp LS(N) &kp N0 &kp LS(X) &kp B &kp S &kp LS(Y) &kp E &kp J &kp C &kp I &kp N5 &kp N9 &kp F &kp LS(Z) &kp LS(T) &kp U &kp N0 &kp LS(J) &kp LS(Q) &kp LS(Q) &kp LS(J) &kp N9 &kp N9 &kp LS(B) &kp LS(D) &kp LS(A) &kp LS(C) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(I) &kp LS(A) &kp LS(Y) &kp N &kp LS(K) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(S) &kp LS(A) &kp LS(Z) &kp LS(D) &kp LS(O) &kp N2 &kp L &kp D &kp LS(M)>;
+            label = "REPBOR";
         };
     };
 
