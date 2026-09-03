@@ -18,29 +18,22 @@
 #define NUM 1
 #define NAV 2
 #define SWT 3
-#define FN 4
-#define SNI 5
-#define SCR 6
-#define BOOT 7
+#define SNI 4
+#define SCR 5
+#define BOOT 6
 
 // Layer-Tap and Mod-Tap Config Preferences
 
 &sk { quick-release; };
 
 &lt {
-    require-prior-idle-ms = <125>;
-    tapping-term-ms = <230>;
-    quick-tap-ms = <150>;
-    hold-trigger-on-release;
-    flavor = "balanced";
+    hold-while-undecided;
+    quick-tap-ms = <175>;
 };
 
 &mt {
-    flavor = "balanced";
-    require-prior-idle-ms = <150>;
-    tapping-term-ms = <230>;
-    quick-tap-ms = <150>;
-    hold-trigger-on-release;
+    flavor = "tap-preferred";
+    quick-tap-ms = <175>;
 };
 
 /*
@@ -87,6 +80,19 @@
             require-prior-idle-ms = <125>;
             flavor = "balanced";
             tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+        };
+
+        switch_win_behaviour: switch_win_behaviour {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SWITCH_WIN_BEHAVIOUR";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+            hold-while-undecided;
+            quick-tap-ms = <175>;
         };
     };
 
@@ -113,14 +119,13 @@
 
         copy {
             bindings = <&kp LC(C)>;
-            key-positions = <15 28>;
+            key-positions = <14 27>;
             timeout-ms = <30>;
-            require-prior-idle-ms = <180>;
         };
 
         paste {
             bindings = <&mt LCTRL LC(V)>;
-            key-positions = <15 4>;
+            key-positions = <16 27>;
             timeout-ms = <30>;
             require-prior-idle-ms = <180>;
         };
@@ -150,7 +155,8 @@
 
         stickyalt {
             bindings = <&sk LEFT_ALT>;
-            key-positions = <14 15 16>;
+            key-positions = <14 15>;
+            timeout-ms = <50>;
         };
 
         colonn {
@@ -167,31 +173,25 @@
 
         value {
             bindings = <&value>;
-            key-positions = <9 21>;
+            key-positions = <25 26>;
             timeout-ms = <30>;
         };
 
         statementcombo {
             bindings = <&statement>;
-            key-positions = <9 40>;
-            timeout-ms = <30>;
-        };
-
-        enterr {
-            bindings = <&kp ENTER>;
-            key-positions = <31 32>;
+            key-positions = <20 21 19 22>;
             timeout-ms = <30>;
         };
 
         backspaced {
             bindings = <&kp BACKSPACE>;
-            key-positions = <20 32>;
+            key-positions = <19 31>;
             timeout-ms = <25>;
         };
 
         plus {
             bindings = <&kp PLUS>;
-            key-positions = <18 30>;
+            key-positions = <27 15>;
             timeout-ms = <30>;
         };
 
@@ -228,13 +228,14 @@
 
         at {
             bindings = <&mt HASH AT>;
-            key-positions = <32 21>;
+            key-positions = <31 20 33>;
             timeout-ms = <30>;
         };
 
         window {
             bindings = <&sk LEFT_GUI>;
             key-positions = <26 27 28>;
+            timeout-ms = <50>;
         };
 
         types {
@@ -245,12 +246,12 @@
 
         printscreen {
             bindings = <&kp LG(LS(S))>;
-            key-positions = <7 8 19 20>;
+            key-positions = <2 4>;
         };
 
         grave {
             bindings = <&kp GRAVE>;
-            key-positions = <6 18>;
+            key-positions = <13 1>;
             timeout-ms = <30>;
         };
 
@@ -258,12 +259,6 @@
             bindings = <&kp QUESTION>;
             key-positions = <20 33>;
             timeout-ms = <30>;
-        };
-
-        ctrlbspace {
-            bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <19 31>;
-            timeout-ms = <25>;
         };
 
         altlefthome {
@@ -280,7 +275,7 @@
 
         backslash {
             bindings = <&kp BACKSLASH>;
-            key-positions = <9 10>;
+            key-positions = <15 28 2>;
             timeout-ms = <30>;
         };
 
@@ -312,7 +307,7 @@
 
         rightclickr {
             bindings = <&mkp RCLK>;
-            key-positions = <15 16>;
+            key-positions = <27 28>;
             timeout-ms = <45>;
             require-prior-idle-ms = <200>;
         };
@@ -320,20 +315,6 @@
         delete {
             bindings = <&kp DELETE>;
             key-positions = <17 29>;
-            timeout-ms = <30>;
-        };
-
-        switchwinright {
-            bindings = <&switchwin>;
-            key-positions = <19 20>;
-            require-prior-idle-ms = <500>;
-            timeout-ms = <25>;
-            slow-release;
-        };
-
-        stickyfunlayer {
-            bindings = <&sl 4>;
-            key-positions = <3 8>;
             timeout-ms = <30>;
         };
 
@@ -354,16 +335,8 @@
             timeout-ms = <30>;
         };
 
-        leptclick {
-            bindings = <&mkp LCLK>;
-            key-positions = <14 15>;
-            slow-release;
-            timeout-ms = <25>;
-            require-prior-idle-ms = <100>;
-        };
-
-        tobase_esc {
-            bindings = <&to_base_escape>;
+        escape {
+            bindings = <&kp ESCAPE>;
             key-positions = <20 21>;
             timeout-ms = <25>;
             require-prior-idle-ms = <500>;
@@ -394,7 +367,7 @@
 
         contextmernu {
             bindings = <&kp K_CONTEXT_MENU>;
-            key-positions = <16 14>;
+            key-positions = <16 15>;
             timeout-ms = <30>;
         };
 
@@ -413,7 +386,7 @@
 
         star {
             bindings = <&kp STAR>;
-            key-positions = <34 22>;
+            key-positions = <18 30>;
         };
 
         lessthan {
@@ -425,20 +398,34 @@
             bindings = <&kp GREATER_THAN>;
             key-positions = <30 19>;
         };
+
+        hash {
+            bindings = <&kp HASH>;
+            key-positions = <33 21>;
+        };
+
+        slashe {
+            bindings = <&kp SLASH>;
+            key-positions = <32 21>;
+        };
+
+        swin {
+            bindings = <&switch_win_behaviour SWT ENTER>;
+            key-positions = <32 31>;
+        };
+
+        ctrlship {
+            bindings = <&kp LC(LEFT_SHIFT)>;
+            key-positions = <36 37>;
+        };
+
+        doubclick {
+            bindings = <&doubleclick>;
+            key-positions = <27 26>;
+        };
     };
 
     macros {
-        switchwin: switchwin {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&mo 3 &kp LGUI>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&mo 3 &kp LEFT_WIN>;
-        };
-
         info: info {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -461,7 +448,7 @@
         slogan: slogan {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(T) &kp R &kp A &kp C &kp K &kp B &kp A &kp L &kp L &kp LS(G) &kp L &kp O &kp V &kp E &kp N3 &kp N5 &kp LS(E) &kp N &kp D &kp LS(G) &kp A &kp M &kp E>;
+            bindings = <&kp LS(J) &kp A &kp N &kp G &kp A &kp N &kp LS(C) &kp O &kp N &kp S &kp O &kp O &kp M &kp N4 &kp LS(H) &kp A &kp P &kp P &kp I &kp N &kp E &kp S &kp S &kp LS(K) &kp A &kp N &kp QMARK>;
         };
 
         repand: repand {
@@ -512,13 +499,21 @@
         to_base_escape: to_base_escape {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &kp ESCAPE>;
+            bindings = <&to DEF &kp ESCAPE>;
         };
 
         new_macro: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N4 &kp LS(V) &kp LS(M) &kp D &kp A &kp LS(X) &kp LS(Q) &kp LS(V) &kp N2 &kp LS(Z) &kp LS(J) &kp U &kp LS(G) &kp LS(Q) &kp K &kp LS(W) &kp N &kp LS(G) &kp H &kp LS(L) &kp LS(T) &kp N4 &kp T &kp Z &kp LS(T) &kp LS(Y) &kp LS(C) &kp LS(X) &kp L &kp LS(X) &kp I &kp LS(H) &kp G &kp LS(X) &kp W &kp E &kp X &kp LS(I) &kp N3 &kp N9 &kp N7 &kp LS(T) &kp Z &kp N4 &kp R &kp N1 &kp G &kp B &kp LS(L) &kp LS(I) &kp W &kp N &kp LS(J) &kp LS(Q) &kp LS(Q) &kp LS(J) &kp N9 &kp N9 &kp LS(C) &kp LS(C) &kp LS(A) &kp LS(C) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(I) &kp LS(A) &kp LS(Y) &kp N &kp LS(K) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(S) &kp LS(A) &kp LS(Z) &kp LS(D) &kp LS(O) &kp N2 &kp H &kp G &kp H>;
+            bindings = <&kp N4 &kp S &kp LS(R) &kp LS(Z) &kp Q &kp LS(R) &kp N7 &kp N9 &kp D &kp O &kp H &kp T &kp N5 &kp N &kp LS(H) &kp U &kp W &kp LS(I) &kp F &kp O &kp LS(D) &kp T &kp LS(B) &kp P &kp LS(N) &kp G &kp B &kp LS(M) &kp Q &kp LS(P) &kp Z &kp P &kp R &kp LS(N) &kp S &kp LS(E) &kp LS(V) &kp H &kp LS(A) &kp H &kp E &kp N1 &kp LS(N) &kp R &kp N4 &kp P &kp Z &kp LS(V) &kp A &kp T &kp LS(A) &kp LS(F) &kp LS(J) &kp LS(Q) &kp LS(Q) &kp LS(J) &kp N9 &kp N9 &kp LS(C) &kp LS(E) &kp LS(A) &kp LS(C) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(I) &kp LS(A) &kp LS(Y) &kp N &kp LS(K) &kp LS(A) &kp LS(A) &kp LS(A) &kp LS(S) &kp LS(A) &kp LS(Z) &kp LS(D) &kp LS(O) &kp Y &kp LS(E) &kp A &kp P>;
+            label = "NEW_MACRO";
+        };
+
+        doubleclick: doubleclick {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp LCLK &mkp LCLK>;
+            label = "DOUBLECLICK";
         };
 
         new_macro_gt: new_macro_g {
@@ -535,9 +530,9 @@
         default_layer {
             display-name = "Base";
             bindings = <
-  &none  &kp Q  &kp L  &kp Y            &kp P           &kp B      &kp Z        &kp F                      &kp O        &kp U         &kp SLASH  &none
-  &none  &kp C  &kp R  &lt 2 S          &kp T           &kp G      &kp M        &kp N                      &kp E        &kp I         &kp A      &none
-  &none  &kp W  &kp J  &lt 5 V          &kp D           &kp K      &kp X        &lt 2 H                    &lt 5 COMMA  &lt 2 PERIOD  &kp APOS   &none
+  &none  &kp W  &kp L  &kp Y            &kp P           &lt 4 B    &lt 4 Z      &kp F                      &kp O        &kp U       &kp Q     &none
+  &none  &kp C  &kp R  &lt 2 S          &kp T           &kp G      &kp M        &kp N                      &kp E        &kp I       &kp A     &none
+  &none  &kp V  &kp J  &mkp LCLK        &kp D           &kp K      &kp X        &kp H                      &lt 2 COMMA  &kp PERIOD  &kp APOS  &none
                        &mt LCTRL SPACE  &sk LEFT_SHIFT  &kp TAB    &kp LS(TAB)  &keyrepeat_layernum NUM 0  &none
             >;
         };
@@ -545,59 +540,49 @@
         num_layer {
             display-name = "Num";
             bindings = <
-  &none  &trans  &trans        &trans    &trans        &trans    &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none
-  &none  &kp N8  &kp NUMBER_4  &lt 2 N0  &kp NUMBER_2  &trans    &trans  &kp NUMBER_3  &kp NUMBER_1  &kp N5        &kp N9        &none
-  &none  &trans  &trans        &trans    &kp NUMBER_6  &trans    &trans  &kp N7        &trans        &trans        &trans        &none
-                               &trans    &trans        &trans    &trans  &trans        &none
+  &none  &kp F8  &kp F4        &kp F10     &kp F12       &trans          &trans  &kp F13       &kp F11       &kp F5  &kp F9  &none
+  &none  &kp N8  &kp NUMBER_4  &lt NAV N0  &kp NUMBER_2  &kp NUMBER_6    &kp N7  &kp NUMBER_3  &kp NUMBER_1  &kp N5  &kp N9  &none
+  &none  &trans  &trans        &trans      &kp F2        &kp F6          &kp F7  &kp F3        &trans        &trans  &trans  &none
+                               &trans      &trans        &trans          &trans  &trans        &none
             >;
         };
 
         nav_layer {
             display-name = "Nav";
             bindings = <
-  &none  &none   &none         &trans     &trans  &none     &none     &none            &kp UP_ARROW   &none              &none    &none
-  &none  &trans  &kp LEFT_ALT  &trans     &trans  &none     &kp HOME  &kp LEFT_ARROW   &kp DOWN       &kp RIGHT          &kp END  &none
-  &none  &none   &none         &none      &none   &none     &none     &kp LC(PAGE_UP)  &kp PAGE_DOWN  &kp LC(PAGE_DOWN)  &none    &none
-                               &kp LCTRL  &trans  &trans    &trans    &mkp LCLK        &none
+  &none  &none   &none   &trans     &trans  &none     &none     &none            &kp UP_ARROW   &none              &none    &none
+  &none  &trans  &trans  &trans     &trans  &none     &kp HOME  &kp LEFT_ARROW   &kp DOWN       &kp RIGHT          &kp END  &none
+  &none  &none   &none   &none      &none   &none     &none     &kp LC(PAGE_UP)  &kp PAGE_DOWN  &kp LC(PAGE_DOWN)  &none    &none
+                         &kp LCTRL  &trans  &trans    &trans    &mkp LCLK        &none
             >;
         };
 
         switchwin_layer {
             display-name = "Win";
             bindings = <
-  &none  &trans  &kp LG(N7)        &kp LG(N8)        &kp LG(N9)        &trans        &trans  &trans  &trans  &trans  &trans  &none
-  &none  &trans  &kp LG(NUMBER_4)  &kp LG(N5)        &kp LG(NUMBER_6)  &kp LG(N0)    &trans  &trans  &trans  &trans  &trans  &none
-  &none  &trans  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &trans        &trans  &trans  &trans  &trans  &trans  &none
-                                   &trans            &trans            &trans        &trans  &trans  &none
-            >;
-        };
-
-        fn_layer {
-            display-name = "Fn";
-            bindings = <
-  &none  &trans  &trans  &trans   &kp F12  &trans    &trans  &kp F11  &trans  &trans  &trans  &none
-  &none  &kp F8  &kp F4  &kp F10  &kp F2   &trans    &trans  &kp F3   &kp F1  &kp F5  &kp F9  &none
-  &none  &trans  &trans  &trans   &kp F6   &trans    &trans  &kp F7   &trans  &trans  &trans  &none
-                         &trans   &trans   &trans    &trans  &trans   &none
+  &none  &trans  &kp LG(LC(N7))        &kp LG(LC(N8))        &kp LG(LC(N9))        &trans            &trans  &trans  &trans  &trans  &trans  &none
+  &none  &trans  &kp LG(LC(NUMBER_4))  &kp LG(LC(N5))        &kp LG(LC(NUMBER_6))  &kp LG(LC(N0))    &trans  &trans  &trans  &trans  &trans  &none
+  &none  &trans  &kp LG(LC(NUMBER_1))  &kp LG(LC(NUMBER_2))  &kp LG(LC(NUMBER_3))  &trans            &trans  &trans  &trans  &trans  &trans  &none
+                                       &trans                &trans                &trans            &trans  &trans  &none
             >;
         };
 
         snipe_layer {
             display-name = "Snipe";
             bindings = <
-  &none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
-  &none  &trans  &mo 7   &trans  &trans  &trans    &trans  &trans  &trans  &mo 7   &trans  &none
-  &none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
-                         &trans  &trans  &trans    &trans  &trans  &none
+  &none  &trans  &trans    &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans  &none
+  &none  &trans  &mo BOOT  &trans  &trans  &trans    &trans  &trans  &trans  &mo BOOT  &trans  &none
+  &none  &trans  &trans    &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans  &none
+                           &trans  &trans  &trans    &trans  &trans  &none
             >;
         };
 
         scroll_layer {
             display-name = "Scroll";
             bindings = <
-  &none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
-  &none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &mo 7   &trans  &none
-  &none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
+  &none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans  &none
+  &none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &mo BOOT  &trans  &none
+  &none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans  &none
                          &trans  &trans  &trans    &trans  &trans  &none
             >;
         };
@@ -605,9 +590,9 @@
         bootloader_layer {
             display-name = "Boot";
             bindings = <
-  &none  &bootloader  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &bootloader  &none
-  &none  &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans       &none
-  &none  &none        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &none        &none
+  &none  &bootloader  &trans  &trans  &trans  &trans    &trans  &trans  &bt BT_SEL 0  &trans  &bootloader  &none
+  &none  &trans       &trans  &trans  &trans  &trans    &trans  &trans  &bt BT_SEL 1  &trans  &trans       &none
+  &none  &none        &trans  &trans  &trans  &trans    &trans  &trans  &bt BT_SEL 2  &trans  &none        &none
                               &trans  &trans  &trans    &trans  &trans  &none
             >;
         };
