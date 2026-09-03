@@ -12,8 +12,12 @@
 #     shield: reviung41
 #
 ---
+# ZMK main moved to Zephyr 4.1 / hardware model v2: `nice_nano_v2` no longer
+# exists as a board name. `nice_nano` now defaults to revision 2.0.0, and ZMK
+# board definitions require the `zmk` variant -> `nice_nano//zmk`.
+# See https://zmk.dev/blog/2025/12/09/zephyr-4-1
 include:
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: corne_left nice_view_adapter nice_view
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: corne_right nice_view_adapter nice_view
