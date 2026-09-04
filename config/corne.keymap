@@ -26,20 +26,6 @@
 
 &sk { quick-release; };
 
-// nice!view VCOM inversion
-//
-// The panel has no EXTCOMIN pin, so VCOM can only be inverted by setting the
-// VCOM bit in SPI commands. Without it the LCD sits permanently DC biased and
-// shows nothing, even though pixel data clocks in fine. ZMK's own
-// nice_view.overlay gained these two properties in 3538843a0 (2026-03-31),
-// which is after the v0.3 revision pinned in config/west.yml -- hence setting
-// them here. Requires the ls0xx serial-VCOM backport that west.yml points the
-// Zephyr project at; without that driver support these properties do nothing.
-&nice_view {
-    serial-vcom-inversion;
-    serial-vcom-interval = <33>;
-};
-
 &lt {
     hold-while-undecided;
     quick-tap-ms = <175>;

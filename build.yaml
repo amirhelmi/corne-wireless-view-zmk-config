@@ -14,15 +14,22 @@
 ---
 # Board target follows the ZMK v0.3 pin in config/west.yml, which still uses
 # hardware model v1 -> `nice_nano_v2` (not the `nice_nano//zmk` HWMv2 name).
+#
+# Plain corne shields, NOT `nice_view_adapter nice_view`. This board has the
+# 4-pin I2C header (GND/VCC/SCL/SDA) with an SSD1306 OLED, which the corne
+# shield already describes: it chooses `zephyr,display = &oled` and defines
+# `oled: ssd1306@3c` on `&pro_micro_i2c`. The nice_view_adapter overlay ends
+# with `&pro_micro_i2c { status = "disabled"; }`, so adding those shields
+# switched off the bus the display actually lives on and pointed the display
+# at an ls0xx over SPI that is not physically present -- blank screen on both
+# halves, with the firmware faithfully driving hardware that was not there.
+# A real nice!view would also need a CS wire bodged to D1, which this board
+# does not have.
 include:
   - board: nice_nano_v2
-    shield: corne_left nice_view_adapter nice_view
-    # TEMPORARY -- debug console on the left half while the nice!view is blank.
-    # This snippet sets CONFIG_ZMK_USB_LOGGING and supplies both the
-    # zephyr,cdc-acm-uart node and the zephyr,console chosen it needs.
-    snippet: zmk-usb-logging
+    shield: corne_left
   - board: nice_nano_v2
-    shield: corne_right nice_view_adapter nice_view
+    shield: corne_right
   # Flash this to BOTH halves to wipe stale BLE bonds and split pairing.
   # Required whenever passkey entry or other BLE settings change.
   - board: nice_nano_v2
