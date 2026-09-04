@@ -2,7 +2,26 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: amirhelmi
+      url-base: https://github.com/amirhelmi
   projects:
+    # Overrides the zephyr project imported by zmk's app/west.yml below. West
+    # gives the top-level manifest precedence, so this definition wins.
+    #
+    # Same tree as zmkfirmware/zephyr v3.5.0+zmk-fixes (dacab4875df7), plus a
+    # backport of the ls0xx serial VCOM inversion support that the nice!view
+    # needs. Upstream backported it to v4.1.0+zmk-fixes only, never to 3.5, so
+    # on v0.3 the panel has no way to invert VCOM and stays blank. Drop this
+    # override if the zmk revision below ever moves past 2026-03-31.
+    #
+    # The import block mirrors zmk's own so Zephyr's modules still resolve.
+    - name: zephyr
+      remote: amirhelmi
+      revision: v3.5.0-zmk-fixes-ls0xx-serial-vcom
+      clone-depth: 1
+      import:
+        name-blocklist:
+          - ci-tools
     - name: zmk
       remote: zmkfirmware
       # Pinned to the v0.3 release rather than `main`. `main` is mid-migration
