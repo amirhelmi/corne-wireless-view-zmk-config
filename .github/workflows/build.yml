@@ -2,4 +2,7 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    # Must match the ZMK revision pinned in config/west.yml. The @main workflow
+    # added an HWMv2 "explicit ZMK compat" check that exits 1 on HWMv1 boards
+    # like nice_nano_v2, failing the job even though the firmware builds fine.
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
