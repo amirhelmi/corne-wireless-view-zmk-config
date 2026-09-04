@@ -5,7 +5,10 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      # Pinned to the v0.3 release rather than `main`. `main` is mid-migration
+      # to Zephyr 4.1 / hardware model v2 and its BLE stack behaves differently;
+      # v0.3 (Zephyr 3.5) is the revision proven working on the Charybdis build.
+      revision: v0.3
       import: app/west.yml
   self:
     path: config

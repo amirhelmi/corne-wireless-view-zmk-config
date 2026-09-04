@@ -12,12 +12,14 @@
 #     shield: reviung41
 #
 ---
-# ZMK main moved to Zephyr 4.1 / hardware model v2: `nice_nano_v2` no longer
-# exists as a board name. `nice_nano` now defaults to revision 2.0.0, and ZMK
-# board definitions require the `zmk` variant -> `nice_nano//zmk`.
-# See https://zmk.dev/blog/2025/12/09/zephyr-4-1
+# Board target follows the ZMK v0.3 pin in config/west.yml, which still uses
+# hardware model v1 -> `nice_nano_v2` (not the `nice_nano//zmk` HWMv2 name).
 include:
-  - board: nice_nano//zmk
+  - board: nice_nano_v2
     shield: corne_left nice_view_adapter nice_view
-  - board: nice_nano//zmk
+  - board: nice_nano_v2
     shield: corne_right nice_view_adapter nice_view
+  # Flash this to BOTH halves to wipe stale BLE bonds and split pairing.
+  # Required whenever passkey entry or other BLE settings change.
+  - board: nice_nano_v2
+    shield: settings_reset
