@@ -546,7 +546,7 @@
         nav_layer {
             display-name = "Nav";
             bindings = <
-&none  &none   &none   &trans     &trans          &none     &none         &kp K_BACK      &kp UP_ARROW    &kp K_FORWARD  &none    &none
+&none  &none   &none   &trans     &trans          &none     &none         &mkp MB4        &kp UP_ARROW    &mkp MB5       &none    &none
 &none  &trans  &trans  &trans     &trans          &none     &kp HOME      &kp LEFT_ARROW  &kp DOWN        &kp RIGHT      &kp END  &none
 &none  &none   &none   &none      &none           &none     &msc SCRL_UP  &kp PAGE_UP     &msc SCRL_DOWN  &kp PAGE_DOWN  &none    &none
                        &kp LCTRL  &kp LEFT_SHIFT  &trans    &trans        &mkp LCLK       &none
