@@ -185,7 +185,7 @@
         };
 
         backspaced {
-            bindings = <&kp LC(BACKSPACE)>;
+            bindings = <&kp BACKSPACE>;
             key-positions = <19 31>;
             timeout-ms = <25>;
         };
@@ -406,7 +406,7 @@
         };
 
         bsp {
-            bindings = <&kp BACKSPACE>;
+            bindings = <&kp LC(BACKSPACE)>;
             key-positions = <32 31>;
         };
 
